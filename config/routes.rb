@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get '/contacts/:id' => 'users#contacts'
   get '/wishlist/:id' => 'users#wishlist'
+  get 'contacts/contact_delete/:id' => 'users#contact_delete'
 
   root 'welcome#index'
   get '/users/:id' => 'users#show'

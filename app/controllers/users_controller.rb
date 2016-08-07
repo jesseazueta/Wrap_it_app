@@ -46,6 +46,13 @@ class UsersController < ApplicationController
     render :contacts
   end
 
+  def contact_delete
+    friend = Friendship.find_by(friend_id: params[:id])
+    friend.destroy
+    redirect_to :back
+    # render json: friend.email
+  end
+
   def wish_list
     render :wishlist
   end
