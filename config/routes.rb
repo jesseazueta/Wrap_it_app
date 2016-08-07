@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get '/users/:id' => 'users#show'
 	get '/users' => 'user#index'
+
+  get 'users/:id/gifts/:category' => 'gifts#index'
+  get 'users/:id/gifts' => 'gifts#index'
 end

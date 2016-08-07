@@ -1,6 +1,8 @@
 class GiftsController < ApplicationController
+  
   def index
     @gifts = Gift.all
+    @user = User.find(params[:id])
   end
 
   # GET /projects/1

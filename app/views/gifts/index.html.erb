@@ -1,0 +1,10 @@
+<!-- List all gifts of current user: your own wishlist && wishlist for your contacts/friends -->
+<% if params[:category] %>
+<% @user.gifts.where(category: params[:category]).each do | gift | %>
+<%= gift.name %>
+<% end %>
+<% else %>
+<% @user.gifts.each do |gift| %>
+<%= gift.name %>
+<% end %> 
+<% end %>
