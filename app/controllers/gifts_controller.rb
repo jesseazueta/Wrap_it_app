@@ -1,8 +1,10 @@
 class GiftsController < ApplicationController
   before_action :set_gift, only: [:show, :edit, :update, :destroy]
   before_filter :current_user, only: [:show, :create, :destroy]
+
   def index
     @gifts = Gift.all
+    @user = User.find(params[:id])
   end
 
   # GET /projects/1
