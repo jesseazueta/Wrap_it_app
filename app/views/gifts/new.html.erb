@@ -1,11 +1,9 @@
 <h1>Add An Item to Your List!</h1>
 
-<%= form_for :gifts, url: '/users' do |f| %>
 
- Item Name: <%= f.text_field :first_name %>
- Model #: <%= f.text_field :last_name %>
- Price: <%= f.text_field :email %>
- Category: <%= f.password_field :password %>
- <%= f.submit "Submit" %>
+<%= render 'form', gift: @gift %>
 
-<% end %>
+
+
+
+<%= link_to "Back to Wishlist", "/wishlist/#{@gift.user.id}" %>

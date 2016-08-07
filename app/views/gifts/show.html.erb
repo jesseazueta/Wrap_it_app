@@ -1,0 +1,22 @@
+
+  <strong>Item Name:</strong>
+  <%= @gift.name %>
+</p>
+
+<p>
+  <strong>Model #:</strong>
+  <%= @gift.model %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  $<%= @gift.price %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @gift.category %>
+</p>
+
+
+<%= link_to "Back to Wishlist", "/wishlist/#{@user.id}" %>

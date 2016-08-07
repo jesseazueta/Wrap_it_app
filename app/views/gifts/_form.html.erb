@@ -1,0 +1,9 @@
+<%= form_for(@gift) do |f| %>
+
+ Item Name: <%= f.text_field :name %>
+ Model #: <%= f.text_field :model %>
+ Price: <%= f.text_field :price %>
+ Category: <%= f.text_field :category %>
+ <%= f.submit "Submit" %>
+
+<% end %>

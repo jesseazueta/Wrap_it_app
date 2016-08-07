@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get '/contacts/:id' => 'users#contacts'
+  get '/wishlist/:id' => 'users#wishlist'
 
   root 'welcome#index'
   get '/users/:id' => 'users#show'

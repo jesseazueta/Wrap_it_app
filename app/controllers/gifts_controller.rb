@@ -1,6 +1,6 @@
 class GiftsController < ApplicationController
   before_action :set_gift, only: [:show, :edit, :update, :destroy]
-  
+  before_filter :current_user, only: [:show, :create, :destroy]
   def index
     @gifts = Gift.all
   end
@@ -8,23 +8,24 @@ class GiftsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-
+    @user = current_user
   end
 
   # GET /projects/new
   def new
-    @gift = Gift.new
+    @gift = current_user.gifts.new
   end
 
   def edit
   end
 
   def create
-    @gift = Gift.new(project_params)
+    @gift = current_user.gifts.build(gift_params)
+
 
     respond_to do |format|
       if @gift.save
-        format.html { redirect_to @gift, notice: 'Item was successfully added.' }
+        format.html { redirect_to "/gifts/#{@gift.id}", notice: 'Item was successfully added.' }
         format.json { render :show, status: :created, location: @gift }
       else
         format.html { render :new }
@@ -50,9 +51,10 @@ class GiftsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
+    @gift = Gift.find(params[:id])
     @gift.destroy
     respond_to do |format|
-      format.html { redirect_to gifts_url, notice: 'Item was successfully removed.' }
+      format.html { redirect_to :back, notice: 'Item was successfully removed.' }
       format.json { head :no_content }
     end
   end
@@ -65,6 +67,6 @@ class GiftsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gift_params
-      params.require(:gift).permit(:name, :model, :price, :category)
+      params.require(:gift).permit(:name, :model, :price, :category, :user_id)
     end
 end
