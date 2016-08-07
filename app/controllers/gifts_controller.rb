@@ -40,7 +40,7 @@ class GiftsController < ApplicationController
   # PATCH/PUT /projects/1.json
   def update
     respond_to do |format|
-      if @gift.update(project_params)
+      if @gift.update(gift_params)
         format.html { redirect_to @gift, notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @gift }
       else
