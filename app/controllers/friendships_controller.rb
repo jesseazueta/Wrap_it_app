@@ -1,6 +1,6 @@
 class FriendshipsController < ApplicationController
   before_action :set_friendship, only: [:show, :edit, :update, :destroy]
-  before_filter :current_user, only: [:show]
+  before_filter :current_user, only: [:show, :create, :destroy]
   # GET /friendships
   # GET /friendships.json
   def index
@@ -29,7 +29,7 @@ class FriendshipsController < ApplicationController
 
     respond_to do |format|
       if @friendship.save
-        format.html { redirect_to @friendship, notice: 'Added Friend.' }
+        format.html { redirect_to "/contacts/#{@current_user.id}", notice: 'Added Friend.' }
         format.json { render :show, status: :created, location: @friendship }
       else
         format.html { render :new }
@@ -58,7 +58,7 @@ class FriendshipsController < ApplicationController
     @friendship = current_user.friendships.find(params[:id])
     @friendship.destroy
     respond_to do |format|
-      format.html { redirect_to friendships_path, notice: 'Friendship was successfully destroyed.' }
+      format.html { redirect_to "contacts/#{@current_user.id}", notice: 'Friendship was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
