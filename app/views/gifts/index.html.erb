@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-<h1>Gifts</h1>
+
+<!-- <h1>Gifts</h1>
 
 <table>
   <thead>
@@ -10,25 +10,66 @@
   </thead>
 
   <tbody>
-    <% @gifts.each do |gift| %>
+    <%# @gifts.each do |gift| %>
       <tr>
-        <td><%= gift.name %></td>
-        <td><%= link_to 'Show', gift %></td>
-        <td><%= link_to 'Edit', edit_gift_path(gift)%></td>
-        <td><%= link_to 'Destroy', gift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= gift.name %></td>
+        <td><%#= link_to 'Show', gift %></td>
+        <td><%#= link_to 'Destroy', gift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <%# end %>
   </tbody>
-</table>
-=======
+</table> -->
+
 <!-- List all gifts of current user: your own wishlist && wishlist for your contacts/friends -->
+<h1> <%= @user.first_name%>'s Wishlist</h1>
+<% if @user == current_user%>
 <% if params[:category] %>
-<% @user.gifts.where(category: params[:category]).each do | gift | %>
-<%= gift.name %>
+<ul>
+  <% @user.gifts.where(category: params[:category]).each do | gift | %>
+  <li>
+    <%= link_to gift.name, gift%>
+    (<%= link_to "Edit Item", edit_gift_path(gift)%>)
+    (<%= link_to "Remove Item", gift, :method => :delete %>)
+  </li>
+  <% end %>
+</ul>
+<% else %>
+<ul>
+  <% @user.gifts.each do |gift| %>
+  <li>
+    <%= link_to gift.name, gift%>
+    (<%= link_to "Edit Item", edit_gift_path(gift)%>)
+    (<%= link_to "Remove Item", gift, :method => :delete %>)
+  </li>
+  <% end %>
+</ul>
 <% end %>
 <% else %>
-<% @user.gifts.each do |gift| %>
-<%= gift.name %>
-<% end %> 
+<% if params[:category] %>
+<ul>
+  <% @user.gifts.where(category: params[:category]).each do | gift | %>
+  <li>
+    <%= link_to gift.name, gift%>
+  </li>
+  <% end %>
+</ul>
+<% else %>
+<ul>
+  <% @user.gifts.each do |gift| %>
+  <li>
+    <%= link_to gift.name, gift%>
+  </li>
+  <% end %>
+</ul>
 <% end %>
->>>>>>> categories
+<% end %>
+
+
+
+
+
+
+<%= link_to "Find Friends", users_path %>
+<%= link_to "Add item to list", new_gift_path %>
+<%= link_to "Back to Profile", @current_user %>
+<%=link_to "Friends", "/contacts/#{@user.id}" %>
