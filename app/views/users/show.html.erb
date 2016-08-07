@@ -6,4 +6,5 @@
 
 
 
-<!-- <%#=link_to "Friends", user_friends_path(@user)%> -->
+<%=link_to "Find Friends", users_path%>
+<%=link_to "Friends", "/contacts/#{@user.id}" %>

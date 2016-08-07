@@ -1,0 +1,7 @@
+<h1>People on Wrap it!</h1>
+<% for user in @users %>
+<p>
+  <strong><%=user.first_name %></strong>
+  <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post%>
+</p>
+<% end %>

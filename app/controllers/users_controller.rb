@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :contacts]
   before_filter :current_user
 
   def index
@@ -41,7 +41,9 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to users_url, notice: 'Profile deleted!'
   end
-
+  def contacts
+  render :contacts
+  end
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_user

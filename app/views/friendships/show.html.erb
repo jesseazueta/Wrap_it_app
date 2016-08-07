@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <p>
+  <strong>User:</strong>
+  <%= @friendship.user_id %>
+</p>
+
+<p>
+  <strong>Friend:</strong>
+  <%= @friendship.friend_id %>
+</p> -->
+<ul>
+    <% @user.friendships.each do |friendship| %>
+    <li>
+    <%= friendship.friend.first_name %>
+    (<%= link_to "Remove Friendship", friendship, :method => :delete %>)
+  </li>
+  <% end %>
+</ul>
+
+
+<!-- <%= link_to 'Edit', edit_friendship_path(@friendship) %> | -->
+<%= link_to 'Back', users_path %>

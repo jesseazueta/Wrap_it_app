@@ -1,0 +1,8 @@
+<ul>
+    <% @user.friendships.each do |friendship| %>
+    <li>
+    <%= friendship.friend.first_name %>
+    (<%= link_to "Remove Friendship", friendship, :method => :delete %>)
+  </li>
+  <% end %>
+</ul>
