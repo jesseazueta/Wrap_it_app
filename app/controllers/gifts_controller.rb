@@ -10,7 +10,7 @@ class GiftsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @user = current_user
+    @user = @gift.user
   end
 
   # GET /projects/new

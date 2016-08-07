@@ -4,7 +4,7 @@
 <ul>
     <% @user.friends.each do |friend| %>
     <li>
-    <%= link_to friend.first_name, "/wishlist/#{friend.id}" %>
+    <%= link_to friend.first_name, "/users/#{friend.id}/gifts" %>
     (<%= link_to "Remove Friendship", "contact_delete/#{friend.id}"%>)
   </li>
   <% end %>

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy, :contacts, :wishlist]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :contacts,]
   before_filter :current_user
 
   def index
@@ -53,9 +53,6 @@ class UsersController < ApplicationController
     # render json: friend.email
   end
 
-  def wish_list
-    render :wishlist
-  end
 
 
   private
