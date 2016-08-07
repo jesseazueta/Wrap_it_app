@@ -1,4 +1,6 @@
 class GiftsController < ApplicationController
+  before_action :set_gift, only: [:show, :edit, :update, :destroy]
+  
   def index
     @gifts = Gift.all
   end
@@ -57,12 +59,12 @@ class GiftsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_project
+    def set_gift
       @gift = Gift.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def project_params
+    def gift_params
       params.require(:gift).permit(:name, :model, :price, :category)
     end
 end
