@@ -1,5 +1,5 @@
 class FriendshipsController < ApplicationController
-  before_action :set_friendship, only: [:show, :edit, :update, :destroy]
+  before_action :set_friendship, only: [:show, :edit, :update,]
   before_filter :current_user, only: [:show, :create, :destroy]
   # GET /friendships
   # GET /friendships.json
@@ -58,7 +58,7 @@ class FriendshipsController < ApplicationController
     @friendship = current_user.friendships.find(params[:id])
     @friendship.destroy
     respond_to do |format|
-      format.html { redirect_to "contacts/#{@current_user.id}", notice: 'Friendship was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Friendship was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
