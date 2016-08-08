@@ -60,15 +60,47 @@ class GiftsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def search
+    request = Vacuum.new
+
+    request.configure(
+    aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+    aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+    associate_tag: 'tag'
+    )
+
+    response = request.item_search(
+    query: {
+      'SearchIndex' => "All",
+      'Keywords' => "Toaster",
+      'ResponseGroup' => "ItemAttributes,Images"
+    }
+    )
+
+    # hashed_products = response.to_h
+    #
+    # @products = []
+    #
+    # hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
+    #   product = OpenStruct.new
+    #   product.name = item['ItemAttributes']['Title']
+    #   product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
+    #   product.url = item['DetailPageURL']
+    #   product.feature = item['ItemAttributes']['Feature']
+    #   product.image_url = item['LargeImage']['URL'] if item['LargeImage']
+    #   product.link = item['ItemLinks']['ItemLink'][5]['URL']
+    #   @products << product
+    # end
+  end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_gift
-      @gift = Gift.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_gift
+    @gift = Gift.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def gift_params
-      params.require(:gift).permit(:name, :model, :price, :category, :user_id, :store, :weblink)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def gift_params
+    params.require(:gift).permit(:name, :model, :price, :category, :user_id, :store, :weblink)
+  end
 end
