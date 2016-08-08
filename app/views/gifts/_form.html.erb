@@ -4,6 +4,8 @@
  Model #: <%= f.text_field :model %>
  Price: <%= f.text_field :price %>
  Category: <%=f.select(:category, options_for_select(["Electronics", "Apparel", "Toys", "Personal"]))%>
+ Store: <%=f.select(:store, options_for_select(["Amazon", "Macy's", "Walmart", "Target"]))%>
+ Weblink: <%= f.text_field :weblink%>
  <%= f.submit "Submit" %>
 
 <% end %>
