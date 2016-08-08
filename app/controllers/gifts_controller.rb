@@ -68,14 +68,18 @@ class GiftsController < ApplicationController
     aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
     associate_tag: 'tag'
     )
+    # byebug
+    response= request.item_search(
+    query:{
+        'Keywords' => 'Architecture',
+        'SearchIndex' => 'Books'
+      }
+      )
 
-    response = request.item_search(
-    query: {
-      'SearchIndex' => "All",
-      'Keywords' => "Toaster",
-      'ResponseGroup' => "ItemAttributes,Images"
-    }
-    )
+        results = response.to_h
+
+
+
 
     # hashed_products = response.to_h
     #
