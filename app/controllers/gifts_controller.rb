@@ -52,14 +52,15 @@ class GiftsController < ApplicationController
 
   # DELETE /projects/1
   # DELETE /projects/1.json
-  # def destroy
-  #   @gift = Gift.find(params[:id])
-  #   @gift.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to :back, notice: 'Item was successfully removed.' }
-  #     format.json { head :no_content }
-  #   end
-  # end
+
+  def destroy
+    @gift = Gift.find(params[:id])
+    @gift.destroy
+    respond_to do |format|
+      format.html { redirect_to :back, notice: 'Item was successfully removed.' }
+      format.json { head :no_content }
+    end
+  end
   # def search
   #   request = Vacuum.new
   #
@@ -75,9 +76,15 @@ class GiftsController < ApplicationController
   #       'SearchIndex' => 'Books'
   #     }
   #   )
+
   #
   #     response.to_h
   #
+
+
+      # response.to_h
+
+
 
 
     # hashed_products = response.to_h
@@ -104,6 +111,7 @@ class GiftsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def gift_params
-    params.require(:gift).permit(:name, :model, :price, :category, :user_id, :store, :weblink,)
+
+    params.require(:gift).permit(:name, :model, :price, :category, :user_id, :store, :weblink, :image)
   end
 end
