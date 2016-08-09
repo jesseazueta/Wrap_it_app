@@ -7,6 +7,8 @@ class User < ApplicationRecord
               format: {
                 with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
               }
+    has_attached_file :image, styles: {thumb: "175x175#" }
+    validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   has_many :friendships, dependent: :destroy
   has_many :friends, :through => :friendships

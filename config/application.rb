@@ -11,5 +11,6 @@ module WrapItApp
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    # config.gem 'ruby-aaws', :lib => 'amazon/aws/search', :version => '0.7.0'
   end
 end
