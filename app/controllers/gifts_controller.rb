@@ -60,23 +60,23 @@ class GiftsController < ApplicationController
   #     format.json { head :no_content }
   #   end
   # end
-  # def search
-  #   request = Vacuum.new
-  #
-  #   request.configure(
-  #   aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
-  #   aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
-  #   associate_tag: 'jesseazueta'
-  #   )
-  #
-  #   response = request.item_search(
-  #   query:{
-  #       # 'Keywords' => 'Architecture',
-  #       # 'SearchIndex' => 'Books'
-  #     }
-  #   )
-  #
-  #     response.to_h
+  def search
+    request = Vacuum.new
+
+    request.configure(
+    aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+    aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
+    associate_tag: 'jesseazueta'
+    )
+
+    response = request.item_search(
+    query:{
+        # 'Keywords' => 'Architecture',
+        'SearchIndex' => 'Books'
+      }
+    )
+
+      response.to_h
 
 
 
@@ -94,7 +94,7 @@ class GiftsController < ApplicationController
     #   product.link = item['ItemLinks']['ItemLink'][5]['URL']
     #   @products << product
   #   # end
-  # end
+  end
 
   private
   # Use callbacks to share common setup or constraints between actions.
