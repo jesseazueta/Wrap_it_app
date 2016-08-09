@@ -52,31 +52,31 @@ class GiftsController < ApplicationController
 
   # DELETE /projects/1
   # DELETE /projects/1.json
-  # def destroy
-  #   @gift = Gift.find(params[:id])
-  #   @gift.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to :back, notice: 'Item was successfully removed.' }
-  #     format.json { head :no_content }
-  #   end
-  # end
-  def search
-    request = Vacuum.new
+  def destroy
+    @gift = Gift.find(params[:id])
+    @gift.destroy
+    respond_to do |format|
+      format.html { redirect_to :back, notice: 'Item was successfully removed.' }
+      format.json { head :no_content }
+    end
+  end
+  # def search
+  #   request = Vacuum.new
+  #
+  #   request.configure(
+  #   aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+  #   aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
+  #   associate_tag: 'jesseazueta'
+  #   )
+  #
+  #   response = request.item_search(
+  #   query:{
+  #       # 'Keywords' => 'Architecture',
+  #       'SearchIndex' => 'Books'
+  #     }
+  #   )
 
-    request.configure(
-    aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
-    aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
-    associate_tag: 'jesseazueta'
-    )
-
-    response = request.item_search(
-    query:{
-        # 'Keywords' => 'Architecture',
-        'SearchIndex' => 'Books'
-      }
-    )
-
-      response.to_h
+      # response.to_h
 
 
 
@@ -94,7 +94,7 @@ class GiftsController < ApplicationController
     #   product.link = item['ItemLinks']['ItemLink'][5]['URL']
     #   @products << product
   #   # end
-  end
+  # end
 
   private
   # Use callbacks to share common setup or constraints between actions.
@@ -104,6 +104,6 @@ class GiftsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def gift_params
-    params.require(:gift).permit(:name, :model, :price, :category, :user_id, :store, :weblink)
+    params.require(:gift).permit(:name, :model, :price, :category, :user_id, :store, :weblink, :image)
   end
 end

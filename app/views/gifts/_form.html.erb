@@ -1,4 +1,4 @@
-<%= form_for(@gift) do |f| %>
+<%= form_for @gift,html: { multipart: true } do |f| %>
 
  Item Name: <%= f.text_field :name %>
  Model #: <%= f.text_field :model %>
@@ -6,6 +6,7 @@
  Category: <%=f.select(:category, options_for_select(["Electronics", "Apparel", "Toys", "Personal"]))%>
  Store: <%=f.select(:store, options_for_select(["Amazon", "Macy's", "Walmart", "Target"]))%>
  Weblink: <%= f.text_field :weblink%>
+ Image: <%= f.file_field :image%>
  <%= f.submit "Submit" %>
 
 <% end %>

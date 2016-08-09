@@ -22,8 +22,18 @@
   <%= @gift.store %>
 </p>
 <p>
+  <%unless @gift.weblink.nil?%>
   <strong>Weblink:</strong>
   <%= link_to 'See Item', @gift.weblink %>
+  <%else%>
+  <strong>Weblink:</strong>
+  No link
+  <%end %>
+</p>
+<p>
+  <strong>Image:</strong>
+</br>
+  <%=image_tag(@gift.image, height:'175px', width: '175px',class: "item_pic")%>
 </p>
 
 
