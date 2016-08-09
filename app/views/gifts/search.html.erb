@@ -1,2 +1,11 @@
-<%= link_to @response["ItemSearchResponse"]["Items"]["Item"][0]["ItemAttributes"]["Title"], @response["ItemSearchResponse"]["Items"]["Item"][0]["DetailPageURL"] %>
-<%=  @response["ItemSearchResponse"]["Items"]["Item"][0]["SmallImage"]["URL"]%>
+<h1>Wrap-it! Results!</h1>
+
+<%#= link_to @response["ItemSearchResponse"]["Items"]["Item"][0]["ItemAttributes"]["Title"], @response["ItemSearchResponse"]["Items"]["Item"][0]["DetailPageURL"] %>
+<!-- <img src="<%=@response["ItemSearchResponse"]["Items"]["Item"][0]["SmallImage"]["URL"]%>"/> -->
+<p>
+<%item = @response["ItemSearchResponse"]["Items"]["Item"]%>
+<% item.each do |result| %>
+<%= link_to result["ItemAttributes"]["Title"], result["DetailPageURL"] %>
+<img src="<%=result["SmallImage"]["URL"]%>"/></br>
+<% end %>
+</p>
