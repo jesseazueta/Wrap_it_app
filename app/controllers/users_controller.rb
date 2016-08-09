@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy, :contacts,]
-  before_filter :current_user
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :contacts]
+  # before_filter :current_user
 
   def index
     @users = User.all
@@ -63,6 +63,6 @@ class UsersController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :image)
   end
 end

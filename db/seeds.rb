@@ -27,5 +27,5 @@ def add_gifts
 	user = User.find_or_create_by({first_name: "Ash", last_name: "Sketchem", email: "sketchymon@example.co", password_digest: BCrypt::Password.create("password")})
 	user = User.find_or_create_by({first_name: "Jonothan", last_name: "Kage", email: "totalcombat@example.co", password_digest: BCrypt::Password.create("password")})
 	user = User.find_or_create_by({first_name: "Damian", last_name: "Bayne", email: "ghulies@example.co", password_digest: BCrypt::Password.create("password")})
-	
+
 	add_gifts
