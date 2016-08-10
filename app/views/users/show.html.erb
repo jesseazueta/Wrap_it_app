@@ -1,6 +1,6 @@
 <%= notice %>
  <a href="/logout">Log Out</a>
-<h1> Welcome to your page <%= @user.first_name %>!</h1>
+<h1> Welcome to your page <%= link_to @user.first_name, edit_user_path %>!</h1>
 <%=image_tag(@user.image, height:'175px', width: '175px',class: "item_pic")%>
 
 
