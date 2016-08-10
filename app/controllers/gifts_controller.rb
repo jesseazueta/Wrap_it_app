@@ -1,6 +1,6 @@
 class GiftsController < ApplicationController
-  before_action :set_gift, only: [:show, :edit, :update, :destroy]
-  before_filter :current_user, only: [:show, :create, :destroy]
+  before_action :set_gift, only: [:show, :edit, :update, :destroy, :search]
+  before_filter :current_user, only: [:show, :create, :destroy, :search]
 
   def index
     @gifts = Gift.all
@@ -68,7 +68,7 @@ class GiftsController < ApplicationController
       aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"], aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"], associate_tag: '99741-20'
     )
 
-    response = request.item_search(query: {'Keywords' => 'Underwear','SearchIndex' => 'All', 'ResponseGroup' => 'ItemAttributes,Images'})
+    response = request.item_search(query: {'Keywords' => @gift.name,'SearchIndex' => @gift.category, 'ResponseGroup' => 'ItemAttributes,Images'})
 
    pp response.to_h
     @response = response.to_h
