@@ -1,22 +1,25 @@
-<div class="about-container">
-  <link img src="sunset.jpg" class="background"/>
-  <h1 class="info">About Us</h1>
-  <div class="about">
-    <%= image_tag(src="Adam.jpg", class: "profile") %>
-    <h3>Adam Hill</h3>
-    <p>GitHub:ahill0017</p>
-    <p>Email:adam.graham.hill@gmail.com</p>
-  </div>
-  <div class="about">
-    <%= image_tag("Jesse.jpg", class: "profile") %>
-    <h3>Jesse Azueta</h3>
-    <p>GitHub:jesseazueta</p>
-    <p>Email:jesseazueta@gmail.com</p>
-  </div>
-  <div class="about">
-    <%= image_tag("Victor.jpg", class: "profile") %>
-    <h3>Victor Laznik</h3>
-    <p>GitHub:vlaznik</p>
-    <p>Email:victor.laznik@gmail.com</p>
+<div class="background">
+  <div class="about-container">
+    <link img src="sunset.jpg" class="background"/>
+    <h1 class="info">About Us</h1>
+    <div class="about">
+      <%= image_tag(src="Adam.jpg", class: "profile") %>
+      <h3>Adam Hill</h3>
+      <p>GitHub:ahill0017</p>
+      <p>Email:adam.graham.hill@gmail.com</p>
+    </div>
+    <div class="about">
+      <%= image_tag("Jesse.jpg", class: "profile") %>
+      <h3>Jesse Azueta</h3>
+      <p>GitHub:jesseazueta</p>
+      <p>Email:jesseazueta@gmail.com</p>
+    </div>
+    <div class="about">
+      <%= image_tag("Victor.jpg", class: "profile") %>
+      <h3>Victor Laznik</h3>
+      <p>GitHub:vlaznik</p>
+      <p>Email:victor.laznik@gmail.com</p>
+    </div>
+    <%= link_to 'Back', user_path(@current_user) %>
   </div>
 </div>
