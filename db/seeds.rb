@@ -7,7 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 def add_gifts
 	gift_list = [{name: "Waffle Iron", category: "Personal", model: "z66Wafflenator", price: 200,},
-		{name: "Televison", category: "Electronics", model: "Sony 24", price: 800}]
+		{name: "Televison", category: "Electronics", model: "Sony 24", price: 800},
+		{name: "Cards Against Humanity Card Game", category: "Toys", model: "Original", price: 25},
+		{name: "Ray Ban Sunglasses", category: "Apparel", model: "Aviators", price: 200},
+		{name: "Leather Jacket" category: "Apparel", model: "Italian Stallion", price: 300},
+		{name: "Demon Stone", category: "Electronics", model: "PS2", price: 28},
+		{name: "Davidoff Cologne", category: "Personal", model: "Cool Water", price: 60}]
 		users = User.all
 		users.each do | user |
 			gift_list.each do |item |
@@ -27,5 +32,5 @@ def add_gifts
 	user = User.find_or_create_by({first_name: "Ash", last_name: "Sketchem", email: "sketchymon@example.co", password_digest: BCrypt::Password.create("password")})
 	user = User.find_or_create_by({first_name: "Jonothan", last_name: "Kage", email: "totalcombat@example.co", password_digest: BCrypt::Password.create("password")})
 	user = User.find_or_create_by({first_name: "Damian", last_name: "Bayne", email: "ghulies@example.co", password_digest: BCrypt::Password.create("password")})
-	
+
 	add_gifts
