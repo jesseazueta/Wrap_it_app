@@ -22,12 +22,13 @@
   <%= @gift.store %>
 </p>
 <p>
-  <%unless @gift.weblink.nil?%>
-  <strong>Weblink:</strong>
-  <%= link_to 'See Item', @gift.weblink %>
-  <%else%>
+  <%if @gift.weblink.empty?%>
+
   <strong>Weblink:</strong>
   No link
+  <%else%>
+  <strong>Weblink:</strong>
+  <%= link_to 'See Item', @gift.weblink %>
   <%end %>
 </p>
 <p>
@@ -38,4 +39,4 @@
 
 
 <%= link_to "Back to Wishlist", "/users/#{@user.id}/gifts" %>
-<button>WRAP-IT!</button>
+<button><%= link_to "WRAP-IT!", :controller => "gifts", :action => "search", :id => @gift%></button>
