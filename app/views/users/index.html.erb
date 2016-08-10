@@ -2,12 +2,22 @@
 <%=image_tag(current_user.image, height:'175px', width: '175px',class: "item_pic")%>
 <h1> <%= link_to current_user.first_name + " " + current_user.last_name, current_user %>'s on Wrap-It!</h1>
 <h1>People on Wrap it!</h1>
-<% for user in @users %>
-<% unless user == current_user %>
 <p>
-  <%=image_tag(user.image, height:'175px', width: '175px',class: "item_pic")%>
-  <strong><%=user.first_name + " " + user.last_name%></strong>
-  <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post%>
+  <% @list.each do |letter, users| %>
+  <!-- <%# for user in @list %> -->
+  <!--  -->
+  <h1><%=letter.upcase%></h1>
+  <% users.each do |user| %>
+  <%unless user == current_user %>
+  <ul>
+    <li>
+      <%=image_tag(user.image, height:'175px', width: '175px',class: "item_pic")%>
+      <strong><%=user.first_name + " " + user.last_name%></strong>
+      <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post%>
+    </li>
+  </ul>
+  <% end %>
+</br>
+<% end %>
+<% end %>
 </p>
-<% end %>
-<% end %>

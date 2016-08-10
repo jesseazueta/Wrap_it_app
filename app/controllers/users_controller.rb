@@ -4,6 +4,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @users = User.order(:last_name).all
+    @list = @users.group_by{ |user| user.last_name[0] }
+    #
+    # @contact= Contact.new
   end
 
   def show
@@ -45,6 +49,8 @@ class UsersController < ApplicationController
   end
 
   def contacts
+
+    @contact_list = current_user.friends.order(:last_name).all.group_by{ |friend| friend.last_name[0] }
     render :contacts
   end
 
