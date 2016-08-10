@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy, :contacts,]
+  before_action :set_user, only: [:show, :update, :destroy, :contacts]
   before_filter :current_user
 
   def index
@@ -15,6 +15,8 @@ class UsersController < ApplicationController
   end
 
   def edit
+    # only want to be able to edit account of person logged in
+    @user = @current_user
   end
 
   def create
