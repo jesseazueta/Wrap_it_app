@@ -4,7 +4,7 @@
 <p>
 <%item = @response["ItemSearchResponse"]["Items"]["Item"]%>
 <% item.each do |result| %>
-<%= link_to result["ItemAttributes"]["Title"], result["DetailPageURL"],target: "_blank" %>
-<img src="<%=result["SmallImage"]["URL"]%>"/></br>
+<img src="<%=result["SmallImage"]["URL"]%>"/>
+<%= link_to result["ItemAttributes"]["Title"], result["DetailPageURL"],target: "_blank" %></br>
 <% end %>
 </p>
