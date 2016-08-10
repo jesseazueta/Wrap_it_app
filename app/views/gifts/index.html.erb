@@ -51,6 +51,7 @@
   <% @user.gifts.where(category: params[:category]).each do | gift | %>
   <li>
     <%= link_to gift.name, gift%>
+    <%= gift.purchased %>
   </li>
   <% end %>
 </ul>
@@ -59,6 +60,8 @@
   <% @user.gifts.each do |gift| %>
   <li>
     <%= link_to gift.name, gift%>
+    <%= gift.purchased %>
+    
   </li>
   <% end %>
 </ul>
