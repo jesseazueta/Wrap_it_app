@@ -1,4 +1,4 @@
-
+<%= notice %></br>
 <!-- <h1>Gifts</h1>
 
 <table>
@@ -21,7 +21,8 @@
 </table> -->
 
 <!-- List all gifts of current user: your own wishlist && wishlist for your contacts/friends -->
-<h1> <%= @user.first_name%>'s Wishlist</h1>
+<%=image_tag(@user.image, height:'175px', width: '175px',class: "item_pic")%>
+<h1> <%= @user.first_name + " " + @user.last_name%>'s Wrap-It! List</h1>
 <% if @user == current_user%>
 <% if params[:category] %>
 <ul>
@@ -50,6 +51,7 @@
   <% @user.gifts.where(category: params[:category]).each do | gift | %>
   <li>
     <%= link_to gift.name, gift%>
+    <%= gift.purchased %>
   </li>
   <% end %>
 </ul>
@@ -58,6 +60,8 @@
   <% @user.gifts.each do |gift| %>
   <li>
     <%= link_to gift.name, gift%>
+    <%= gift.purchased %>
+
   </li>
   <% end %>
 </ul>

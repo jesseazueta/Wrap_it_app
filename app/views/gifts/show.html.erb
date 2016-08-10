@@ -10,14 +10,33 @@
 
 <p>
   <strong>Price:</strong>
-  $<%= @gift.price %>
+  $<%= @gift.price.to_i %>
 </p>
 
 <p>
   <strong>Category:</strong>
   <%= @gift.category %>
 </p>
+<p>
+  <strong>Store:</strong>
+  <%= @gift.store %>
+</p>
+<p>
+  <%if @gift.weblink.empty?%>
+
+  <strong>Weblink:</strong>
+  No link
+  <%else%>
+  <strong>Weblink:</strong>
+  <%= link_to 'See Item', @gift.weblink %>
+  <%end %>
+</p>
+<p>
+  <strong>Image:</strong>
+</br>
+  <%=image_tag(@gift.image, height:'175px', width: '175px',class: "item_pic")%>
+</p>
 
 
-<%= link_to "Back to Wishlist", "/users/#{@user.id}/gifts" %>
-<button>WRAP-IT!</button>
+<%= link_to "Back to Wrap-It! List", "/users/#{@user.id}/gifts" %>
+<button ><%= link_to "WRAP-IT!", :controller => "gifts", :action => "search", :id => @gift%></button>

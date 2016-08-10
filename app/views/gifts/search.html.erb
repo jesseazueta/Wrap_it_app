@@ -1,0 +1,10 @@
+<h1>Wrap-it! Results!</h1>
+
+
+<p>
+<%item = @response["ItemSearchResponse"]["Items"]["Item"]%>
+<% item.each do |result| %>
+<img src="<%=result["SmallImage"]["URL"]%>"/>
+<%= link_to result["ItemAttributes"]["Title"], result["DetailPageURL"],target: "_blank" %></br>
+<% end %>
+</p>

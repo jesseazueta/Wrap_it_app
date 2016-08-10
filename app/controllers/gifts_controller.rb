@@ -1,6 +1,6 @@
 class GiftsController < ApplicationController
-  before_action :set_gift, only: [:show, :edit, :update, :destroy]
-  before_filter :current_user, only: [:show, :create, :destroy]
+  before_action :set_gift, only: [:show, :edit, :update, :destroy, :search]
+  before_filter :current_user, only: [:show, :create, :destroy, :search]
 
   def index
     @gifts = Gift.all
@@ -52,6 +52,7 @@ class GiftsController < ApplicationController
 
   # DELETE /projects/1
   # DELETE /projects/1.json
+
   def destroy
     @gift = Gift.find(params[:id])
     @gift.destroy
@@ -61,14 +62,41 @@ class GiftsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_gift
-      @gift = Gift.find(params[:id])
-    end
+  def search
+    request = Vacuum.new
+    request.configure(
+      aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"], aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"], associate_tag: '99741-20'
+    )
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def gift_params
-      params.require(:gift).permit(:name, :model, :price, :category, :user_id)
-    end
+    response = request.item_search(query: {'Keywords' => @gift.name,'SearchIndex' => @gift.category, 'ResponseGroup' => 'ItemAttributes,Images'})
+
+   pp response.to_h
+    @response = response.to_h
+    # hashed_products = response.to_h
+    #
+    # @products = []
+    #
+    # hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
+    #   product = OpenStruct.new
+    #   product.name = item['ItemAttributes']['Title']
+    #   product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
+    #   product.url = item['DetailPageURL']
+    #   product.feature = item['ItemAttributes']['Feature']
+    #   product.image_url = item['LargeImage']['URL'] if item['LargeImage']
+    #   product.link = item['ItemLinks']['ItemLink'][5]['URL']
+    #   @products << product
+  #   # end
+  end
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_gift
+    @gift = Gift.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def gift_params
+
+    params.require(:gift).permit(:name, :model, :price, :category, :user_id, :store, :weblink, :image)
+  end
 end

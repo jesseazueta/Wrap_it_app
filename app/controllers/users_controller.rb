@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy, :contacts,]
+  before_action :set_user, only: [:show, :update, :destroy, :contacts]
   before_filter :current_user
   def about
     render 'welcome/about.html.erb'
@@ -17,6 +17,8 @@ class UsersController < ApplicationController
   end
 
   def edit
+    # only want to be able to edit account of person logged in
+    @user = @current_user
   end
 
   def create
@@ -65,6 +67,6 @@ class UsersController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :image)
   end
 end

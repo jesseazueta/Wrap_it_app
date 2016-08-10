@@ -13,8 +13,13 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get '/users/:id' => 'users#show'
+<<<<<<< HEAD
 	get '/users' => 'users#index'
   get 'about' => 'users#about'
+=======
+	get '/users' => 'user#index'
+  get '/search/:id' => 'gifts#search'
+>>>>>>> 364a1ac17643f583a3f15727c92d991ab48aca91
 
   get 'users/:id/gifts/:category' => 'gifts#index'
   get 'users/:id/gifts' => 'gifts#index'
