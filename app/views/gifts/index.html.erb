@@ -1,4 +1,4 @@
-
+<%= notice %></br>
 <!-- <h1>Gifts</h1>
 
 <table>
@@ -22,7 +22,7 @@
 
 <!-- List all gifts of current user: your own wishlist && wishlist for your contacts/friends -->
 <%=image_tag(@user.image, height:'175px', width: '175px',class: "item_pic")%>
-<h1> <%= @user.first_name%>'s Wishlist</h1>
+<h1> <%= @user.first_name + " " + @user.last_name%>'s Wrap-It! List</h1>
 <% if @user == current_user%>
 <% if params[:category] %>
 <ul>
@@ -61,7 +61,7 @@
   <li>
     <%= link_to gift.name, gift%>
     <%= gift.purchased %>
-    
+
   </li>
   <% end %>
 </ul>
