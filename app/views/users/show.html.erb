@@ -1,10 +1,15 @@
 
 <a href="/logout">Log Out</a></br>
 <%=image_tag(@user.image, height:'175px', width: '175px',class: "item_pic")%>
-<h1><%= link_to @user.first_name + " " + @user.last_name, edit_user_path %>'s Profile!</h1>
+<%= link_to "Edit Profile", edit_user_path %>
+<h1><%=@user.first_name + " " + @user.last_name%>'s Profile!</h1>
 
 
-
+<%=link_to "Electronics", "/users/#{@user.id}/gifts/Electronics"%>
+<%=link_to "Fashion", "/users/#{@user.id}/gifts/Fashion"%>
+<%=link_to "Toys", "/users/#{@user.id}/gifts/Toys"%>
+<%=link_to "Personal", "/users/#{@user.id}/gifts/All"%>
+<%=link_to "View All", "/users/#{@user.id}/gifts"%>
 
 <%=link_to "Find Friends", users_path%>
 <%=link_to "Friends", "/contacts/#{@user.id}" %>

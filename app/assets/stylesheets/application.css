@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color:#222;
+
+
+}
+
+img.bg {
+  background-image: url("https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=13177545a0&view=att&th=15679cb52bd6de2c&attid=0.1&disp=safe&realattid=f_irqd2y6a0&zw&saddbat=ANGjdJ-3y4dOV0rcilTl-HPkjo7Ru_rFBrmlwbom7M--gepbYqv76RCctDoqsVHwehYSMCKkOjE7uxXXmhJWiiu8BrQLNNmixpaEQ4IixrGnCMFYOYhvPzgQYoxOlSeqD6SCECSATeoaqta1KDAVs_e_ltMhYCE-6hu1JQhwl_GE0wHg83Z_sB5wgp0sD8KolpMLmuqz951DCtWeuiMMUimTjjas19Q5hGM2C-eilASFrW2QJBy-LL8CcRSnuY4fQhAoQ2yN3mQetYkJ0puzeiNwYz0GEGC1_7QS9hkUuvuSCIDHgTLnXrSso8FC_pMGh8G2OXFIazVa1Oy2zvor4IDJOuSShAFMc3wekqSqxrIYZCP10weuw9U-TCQFcC5oGdMCFB0G90VZViMD4max_SniawuxbGzVc6SbMd3_Tu-faj8u_ULAG90t2qUwvceKcTR2ZB4LJf41Ch42lu_hWpbMKapSg7H7D0kUYNqK5RhY_ckH7XGBOP_Z9nTCBrDsp70Gry7wpjJv02KXWATU_knMcvv8idQCxv5ADk5qBhvUIFbiCdCarrzkJHbRQOTCHWvmNIGPvQQt5qLBPi1_-DT0eUbdyzRO_fS4bKaQd00v2dSP5tX8p9y1e9roVYCBv68_b28WhoLlZfqOUTeH");
+  background-size: cover;
+  opacity: .2;
+  width: 100%;
+  height: 1024px;
+  min-width: auto;
+  min-height: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

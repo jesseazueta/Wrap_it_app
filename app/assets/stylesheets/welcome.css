@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  border: 0;
+  font-family: 'Fjalla One', sans-serif;
+
+
+}
+
+
+.header{
+  background-color: #29ccc0;
+  height: 20em;
+  border-bottom: 5px solid white;
+  width: 100%;
+  position: fixed;
+
+  z-index: 1;
+}
+
+#greeting {
+  text-align: center;
+  font-size: 4em;
+  padding-top: 2em;
+}
+#greeting,.new_user, .return_user, .or,.footer_message,.title {
+  text-shadow: 2px 2px #666;
+  color:white;
+
+}
+.new_user, .return_user, .or {
+
+  font-size: 3.5em;
+  margin-right: .5em;
+  padding-top: 1.5em;
+}
+.enter {
+  margin-left: 17em;
+  margin-top: 9em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height:12em;
+  background-color: #29ccc0;
+  border-top: 5px solid white;
+  width:100%;
+  z-index: 99;
+}
+.footer_message {
+  text-align: center;
+  font-size: 3.2em;
+  margin-top: 1em;
+}
+.present {
+  margin-top: 30em;
+  margin-left: 5.5em;
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+.title {
+  text-align: center;
+  font-size: 12em;
+}

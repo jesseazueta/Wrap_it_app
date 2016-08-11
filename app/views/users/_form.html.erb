@@ -1,11 +1,12 @@
+
 <%= form_for @user do |f| %>
-
- First Name: <%= f.text_field :first_name %>
- Last Name: <%= f.text_field :last_name %>
- Email: <%= f.text_field :email %>
- Image: <%= f.file_field :image %>
- Password: <%= f.password_field :password %>
- Password Confirmation: <%= f.password_field :password_confirmation %>
- <%= f.submit "Submit" %>
-
+<ul>
+  <li><%= f.text_field :first_name, placeholder: "First Name" %></li>
+  <li><%= f.text_field :last_name, placeholder: "Last Name" %></li>
+  <li><%= f.text_field :email, placeholder: "Email: john@example.com" %></li>
+  <li><button><%= f.file_field :image%></button></li>
+  <li><%= f.password_field :password, placeholder: "Password" %></li>
+  <li><%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %></li>
+  <li><%= f.submit "Make Profile" %></li>
+</ul>
 <% end %>
