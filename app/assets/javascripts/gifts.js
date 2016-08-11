@@ -6,7 +6,7 @@ $(document).on('turbolinks:load', function() {
 			method: 'PUT',
 			data: {
 				gift: {
-					purchased: purchase_status			
+					purchased: purchase_status
 				}
 			}
 		})
