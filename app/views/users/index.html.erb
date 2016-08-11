@@ -7,8 +7,6 @@
 <% unless user == current_user || current_user.friends.include?(user) %>
 <p>
   <% @list.each do |letter, users| %>
-  <!-- <%# for user in @list %> -->
-  <!--  -->
   <h1><%=letter.upcase%></h1>
   <% users.each do |user| %>
   <%unless user == current_user %>
