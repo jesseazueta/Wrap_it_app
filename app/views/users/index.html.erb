@@ -10,7 +10,6 @@
     <li>
         <%=image_tag(user.image, height:'175px', width: '175px',class: "item_pic")%>
         <strong><%=user.first_name + " " + user.last_name%></strong>
-        <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post%>
         <button class="add-friend" data-user-id=<%= user.id %> >Add Friend</button>
     </li>
   </ul>
