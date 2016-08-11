@@ -39,13 +39,17 @@ class GiftsController < ApplicationController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
-    respond_to do |format|
-      if @gift.update(gift_params)
-        format.html { redirect_to @gift, notice: 'Item was successfully updated.' }
-        format.json { render :show, status: :ok, location: @gift }
-      else
-        format.html { render :edit }
-        format.json { render json: @gift.errors, status: :unprocessable_entity }
+    if request.xhr?
+      @gift.update(gift_params)
+    else
+      respond_to do |format|
+        if @gift.update(gift_params)
+          format.html { redirect_to @gift, notice: 'Item was successfully updated.' }
+          format.json { render :show, status: :ok, location: @gift }
+        else
+          format.html { render :edit }
+          format.json { render json: @gift.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -66,11 +70,11 @@ class GiftsController < ApplicationController
     request = Vacuum.new
     request.configure(
       aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"], aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"], associate_tag: '99741-20'
-    )
+      )
 
     response = request.item_search(query: {'Keywords' => @gift.name,'SearchIndex' => @gift.category, 'ResponseGroup' => 'ItemAttributes,Images'})
 
-   pp response.to_h
+    pp response.to_h
     @response = response.to_h
     # hashed_products = response.to_h
     #
@@ -86,9 +90,9 @@ class GiftsController < ApplicationController
     #   product.link = item['ItemLinks']['ItemLink'][5]['URL']
     #   @products << product
   #   # end
-  end
+end
 
-  private
+private
   # Use callbacks to share common setup or constraints between actions.
   def set_gift
     @gift = Gift.find(params[:id])
@@ -97,6 +101,6 @@ class GiftsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def gift_params
 
-    params.require(:gift).permit(:name, :model, :price, :category, :user_id, :store, :weblink, :image)
+    params.require(:gift).permit(:name, :model, :price, :category, :user_id, :store, :weblink, :image, :purchased)
   end
 end
