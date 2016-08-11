@@ -3,7 +3,7 @@
 <h1> <%= link_to current_user.first_name + " " + current_user.last_name, current_user %>'s on Wrap-It!</h1>
 <h1>People on Wrap it!</h1>
 <% for user in @users %>
-<% unless user == current_user %>
+<% unless user == current_user || current_user.friends.include?(user) %>
 <p>
   <%=image_tag(user.image, height:'175px', width: '175px',class: "item_pic")%>
   <strong><%=user.first_name + " " + user.last_name%></strong>
