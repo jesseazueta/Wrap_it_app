@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy, :contacts]
   before_filter :current_user
-
+  def about
+    render 'welcome/about.html.erb'
+  end
   def index
     @users = User.all
     @users = User.order(:last_name).all

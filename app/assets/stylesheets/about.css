@@ -1,0 +1,44 @@
+.background {
+  background-size: cover;
+  background-image: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/9KVBN7OPW3.jpg");
+  background-repeat: no-repeat;
+  height: 135em;
+}
+.profile {
+  height: 200px;
+  width: 150px;
+  border-radius: 100px;
+}
+.about {
+  font-size: 30px;
+  height:inherit;
+  display:flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.about-container {
+position: relative;
+top: 10em;
+color: white;
+width: 100%;
+flex-direction: column;
+font-weight: bold;
+text-align: center;
+align-items: center;
+justify-content: center;
+font-family: 'Open Sans', sans-serif;
+}
+.info  .info{
+  text-align: center;
+  display: block;
+}
+.about-container:before {
+  color: white;
+}
+
+.about-container:visited {
+  color: white;
+}

@@ -10,12 +10,11 @@ Rails.application.routes.draw do
   get '/contacts/:id' => 'users#contacts'
   get '/wishlist/:id' => 'users#wishlist'
   get 'contacts/contact_delete/:id' => 'users#contact_delete'
-
   root 'welcome#index'
   get '/users/:id' => 'users#show'
-	get '/users' => 'user#index'
+	get '/users' => 'users#index'
+  get 'about' => 'users#about'
   get '/search/:id' => 'gifts#search'
-
   get 'users/:id/gifts/:category' => 'gifts#index'
   get 'users/:id/gifts' => 'gifts#index'
 end
