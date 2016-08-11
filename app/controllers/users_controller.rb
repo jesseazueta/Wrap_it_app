@@ -5,8 +5,7 @@ class UsersController < ApplicationController
     render 'welcome/about.html.erb'
   end
   def index
-    @users = User.all
-    @users = User.order(:last_name).all
+    @users = User.all.order(:last_name).all
     @list = @users.group_by{ |user| user.last_name[0] }
     #
     # @contact= Contact.new
