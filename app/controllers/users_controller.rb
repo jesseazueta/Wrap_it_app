@@ -5,10 +5,9 @@ class UsersController < ApplicationController
     render 'welcome/about.html.erb'
   end
   def index
-    @users = User.all.order(:last_name).all
-    @list = @users.group_by{ |user| user.last_name[0] }
-    #
-    # @contact= Contact.new
+    @future_friends = User.where.not(id: current_user.friends)
+                          .order(:last_name)
+                          .group_by{ |user| user.last_name[0] }
   end
 
   def show

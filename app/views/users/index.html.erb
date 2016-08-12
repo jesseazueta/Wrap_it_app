@@ -2,10 +2,9 @@
 <%=image_tag(current_user.image, height:'175px', width: '175px',class: "item_pic" )%>
 <h1> <%= link_to current_user.first_name + " " + current_user.last_name, current_user, id:"back-to-profile", data: { current_user_id: current_user.id } %>'s on Wrap-It!</h1>
 <h1>People on Wrap it!</h1>
-<% @list.each do |letter, users| %>  
+<% @future_friends.each do |letter, users| %>  
   <h1><%=letter.upcase%></h1>
     <% users.each do |user| %>
-      <% unless user == current_user || current_user.friends.include?(user) %>
   <ul>
     <li>
         <%=image_tag(user.image, height:'175px', width: '175px',class: "item_pic")%>
@@ -13,7 +12,6 @@
         <button class="add-friend" data-user-id=<%= user.id %> >Add Friend</button>
     </li>
   </ul>
-      <% end %>
 </br>
   <% end %>
 <% end %>
