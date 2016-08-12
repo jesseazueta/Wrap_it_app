@@ -49,7 +49,7 @@ class UsersController < ApplicationController
 
   def contacts
 
-    @contact_list = current_user.friends.order(:last_name).all.group_by{ |friend| friend.last_name[0] }
+    @contact_list = current_user.current_friends
     render :contacts
   end
 

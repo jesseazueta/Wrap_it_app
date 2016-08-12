@@ -21,5 +21,12 @@ class User < ApplicationRecord
         .where.not(id: self)
         .order(:last_name)
         .group_by{ |user| user.last_name[0] }
-  end 
+  end
+
+  def current_friends
+    User.where(id: self.friends)
+        .where.not(id: self)
+        .order(:last_name)
+        .group_by{ |user| user.last_name[0] }
+  end
 end
