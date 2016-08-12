@@ -37,12 +37,11 @@
   <div class="users_header">
     <h1 class="users_index_title">People on Wrap-It!</h1>
   </div>
-  <% @list.each do |letter, users| %>
+  <% @future_friends.each do |letter, users| %>
   <div class="Letter" id ="contact_list_<%= letter %>">
     <h1 class="upcase"><%=letter.upcase%></h1>
   </div>
   <% users.each do |user| %>
-  <% unless user == current_user || current_user.friends.include?(user) %>
   <ul>
     <li>
       <div class="contact_elements">
@@ -60,19 +59,18 @@
   <% end %>
 </br>
 <% end %>
-<% end %>
 <div class="empty">
 </div>
 </div>
 <footer>
   <div class="nav_tools">
   <ul class="footer_icons">
-    <li><i class="fa fa-user" aria-hidden="true"></i></li>
-    <li><i class="fa fa-gift" aria-hidden="true"></i></li>
+  <li><%= link_to '<i class="fa fa-user" aria-hidden="true"></i>'.html_safe, "/contacts/#{current_user.id}"%></li>
+    <li><%= link_to '<i class="fa fa-gift" aria-hidden="true"></i>'.html_safe, "/users/#{current_user.id}"%></li>
     <li><i class="fa fa-plus" aria-hidden="true"></i></li>
   </ul>
   <ul class="footer_icon_names">
-    <li>Friends</li>
+    <%= link_to 'Friends"></i>'.html_safe, "/contacts/#{current_user.id}"%></li>
     <li>Wrap-It! List</li>
     <li>Add To List</li>
   </ul>
