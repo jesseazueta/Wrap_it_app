@@ -3,8 +3,9 @@ class GiftsController < ApplicationController
   before_filter :current_user, only: [:show, :create, :destroy, :search]
 
   def index
-    @gifts = Gift.all
     @user = User.find(params[:id])
+    @users_gifts = @user.gifts
+    @category_gifts = @users_gifts.where(category: params[:category])
   end
 
   # GET /projects/1
