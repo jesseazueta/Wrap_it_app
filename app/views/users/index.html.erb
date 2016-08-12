@@ -2,6 +2,37 @@
   <%=image_tag(current_user.image, height:'230px', width: '230px',class: "current_user_pic" )%>
   <h1 class="current_user_name"> <%= link_to current_user.first_name + " " + current_user.last_name, current_user, id:"back-to-profile", data: { current_user_id: current_user.id } %></h1>
 </div>
+<div id="alphabet">
+  <ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+    <li>F</li>
+    <li>G</li>
+    <li>H</li>
+    <li>I</li>
+    <li>J</li>
+    <li>K</li>
+    <li>L</li>
+    <li>M</li>
+    <li>N</li>
+    <li>O</li>
+    <li>P</li>
+    <li>Q</li>
+    <li>R</li>
+    <li>S</li>
+    <li>T</li>
+    <li>U</li>
+    <li>V</li>
+    <li>W</li>
+    <li>X</li>
+    <li>Y</li>
+    <li>Z</li>
+  </ul>
+
+</div>
 <div class="all_users">
   <div class="users_header">
     <h1 class="users_index_title">People on Wrap-It!</h1>
@@ -9,28 +40,41 @@
   <% @list.each do |letter, users| %>
   <div class="Letter" id ="contact_list_<%= letter %>">
     <h1 class="upcase"><%=letter.upcase%></h1>
-    <% users.each do |user| %>
-    <% unless user == current_user || current_user.friends.include?(user) %>
-    <ul>
-      <li>
-        <div class="contact_elements">
-
-          <div class="cont_pic">
-            <%=image_tag(user.image, height:'175px', width: '175px',class: "user_pic")%>
-          </div>
-          <div class="contact_name">
-            <strong ><%=user.first_name + " " + user.last_name%></strong>
-            <button class="add-friend" data-user-id=<%= user.id %> >Add Friend</button>
-          </div>
-        </div>
-      </li>
-    </ul>
-    <% end %>
-  </br>
-  <% end %>
-  <% end %>
-  <div class="empty">
   </div>
+  <% users.each do |user| %>
+  <% unless user == current_user || current_user.friends.include?(user) %>
+  <ul>
+    <li>
+      <div class="contact_elements">
+
+        <div class="cont_pic">
+          <%=image_tag(user.image, height:'175px', width: '175px',class: "user_pic")%>
+        </div>
+        <div class="contact_name">
+          <strong ><%=user.first_name + " " + user.last_name%></strong>
+          <button class="add-friend" data-user-id=<%= user.id %> >Add Friend</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <% end %>
+</br>
+<% end %>
+<% end %>
+<div class="empty">
+</div>
 </div>
 <footer>
+  <div class="nav_tools">
+  <ul class="footer_icons">
+    <li><i class="fa fa-user" aria-hidden="true"></i></li>
+    <li><i class="fa fa-gift" aria-hidden="true"></i></li>
+    <li><i class="fa fa-plus" aria-hidden="true"></i></li>
+  </ul>
+  <ul class="footer_icon_names">
+    <li>Friends</li>
+    <li>Wrap-It! List</li>
+    <li>Add To List</li>
+  </ul>
+</div>
 </footer>
