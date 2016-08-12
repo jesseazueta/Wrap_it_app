@@ -198,6 +198,10 @@
 .footer_icon_names,.footer_icons {
   margin-right: 10px;
 }
+.footer_icon_names,.footer_icons a{
+  text-decoration: none;
+  color:white;
+}
 .fa-user:before{
   margin-left:-10px:
 }
