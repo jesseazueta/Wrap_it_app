@@ -1,25 +1,81 @@
-<%=image_tag(@user.image, height:'175px', width: '175px',class: "item_pic")%>
-<h1><%= link_to @user.first_name + " " + @user.last_name, edit_user_path %>'s Friends!</h1>
+<div class="header">
+<%=image_tag(current_user.image, height:'230px', width: '230px',class: "current_user_pic")%>
+<h1><%= link_to @user.first_name + " " + @user.last_name, edit_user_path
+%></h1>
+</div>
+
+<div id="alphabet">
+  <ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+    <li>F</li>
+    <li>G</li>
+    <li>H</li>
+    <li>I</li>
+    <li>J</li>
+    <li>K</li>
+    <li>L</li>
+    <li>M</li>
+    <li>N</li>
+    <li>O</li>
+    <li>P</li>
+    <li>Q</li>
+    <li>R</li>
+    <li>S</li>
+    <li>T</li>
+    <li>U</li>
+    <li>V</li>
+    <li>W</li>
+    <li>X</li>
+    <li>Y</li>
+    <li>Z</li>
+  </ul>
+</div>
 
 
+<div class="all_users">
+  <div class="users_header">
+    <h1 class="users_index_title">Your Friends</h1>
+  </div>
 <% @contact_list.each do |letter, friends| %>
-<h1><%=letter.upcase%></h1>
+<div class="Letter" id ="contact_list_<%= letter %>">
+  <h1 class="upcase"><%=letter.upcase%></h1>
+</div>
 <ul>
-  <%# @user.friends.each do |friend| %>
   <% friends.each do |friend| %>
   <li>
-    <%=image_tag(friend.image, height:'175px', width: '175px',class: "item_pic")%>
+    <div class="contact_elements">
+
+      <div class="cont_pic">
+    <%=image_tag(friend.image, height:'175px', width: '175px',class: "user_pic")%>
+    </div>
+    <div class="contact_name">
     <%= link_to friend.first_name + " " + friend.last_name, "/users/#{friend.id}/gifts" %>
-    (<%= link_to "Remove Friendship", "contact_delete/#{friend.id}"%>)
+    <button class="add-friend"><%= link_to "Remove", "contact_delete/#{friend.id}"%></button>
+    </div>
+  </div>
   </li>
 </br>
 <% end %>
 </ul>
 <% end %>
-
-
-
-
-
-<%= link_to "Find Friends", users_path %>
-<%= link_to "Add item to list", new_gift_path %>
+<div class="empty">
+</div>
+</div>
+<footer>
+  <div class="nav_tools">
+  <ul class="footer_icons">
+    <li><%= link_to '<i class="fa fa-envelope" aria-hidden="true"></i>'.html_safe, users_path%></li>
+  <li><%= link_to '<i class="fa fa-gift" aria-hidden="true"></i>'.html_safe, "/users/#{current_user.id}"%></li>
+    <li><%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_gift_path%></li>
+  </ul>
+  <ul class="footer_icon_names">
+    <li><%= link_to "People", users_path %> </li>
+    <li><%= link_to "Wrap-It! List", "/users/#{current_user.id}"%></li>
+    <li><%= link_to "Add To List", new_gift_path %></li>
+  </ul>
+</div>
+</footer>

@@ -8,7 +8,7 @@
 
 .header{
   background-color: #29ccc0;
-  height: 20em;
+  height: 18%;
   border-bottom: 5px solid white;
   width: 100%;
   position: fixed;
@@ -42,7 +42,7 @@
 footer {
   position: fixed;
   bottom: 0;
-  height:12em;
+  height:12%;
   background-color: #29ccc0;
   border-top: 5px solid white;
   width:100%;

@@ -71,7 +71,7 @@
 }
 
 .empty {
-  height: 12em;
+  height: 20em;
 }
 .Letter, .cont_names{
   color:grey;
@@ -104,6 +104,10 @@
   color: grey;
 
 }
+.contact_name a {
+  text-decoration: none;
+  color:grey;
+}
 
 .upcase {
   margin-left: 5%;
@@ -134,7 +138,7 @@
   font-size: 3em;
   float: right;
   margin-right: 1.7em;
-  padding-top: .5em;
+  padding-top: .8em;
   text-shadow: 2px 2px #666;
 
 }
@@ -144,7 +148,7 @@
 }
 #alphabet {
   font-size: 22px;
-  margin-top: 320px;
+  margin-top: 32.5%;
   margin-left: 890px;
   position: fixed;;
   font-weight: bold;
@@ -178,10 +182,14 @@
   padding-bottom: 8px;
 
 }
+
+.add-friend a{
+
+  color:white;
+}
 .footer_icons li {
   display: inline-block;
   font-size: 80px;
-  margin:5px 95px 0 120px;
   color:white;
   text-shadow: 2px 2px #666;
 }
@@ -191,20 +199,25 @@
   display: inline-block;
   list-style: none;
   font-size: 2.8em;
-  margin:-10px 40px 80px 70px;
+  margin:-10px 30px 80px 70px;
   color:white;
   text-shadow: 2px 2px #666;
 }
 .footer_icon_names,.footer_icons {
-  margin-right: 10px;
+  margin-right: 20px;
 }
-.footer_icon_names,.footer_icons a{
+.footer_icon_names,.footer_icons, a{
   text-decoration: none;
   color:white;
 }
 .fa-user:before{
-  margin-left:-10px:
+  margin-left:-10px;
+  font-size: 100px;
 }
 .fa-gift:before {
+  margin:0 15px;
+  font-size: 100px;
+}
+.fa-envelope:before {
   margin:0 15px;
 }
