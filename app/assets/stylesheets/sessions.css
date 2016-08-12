@@ -1,40 +1,37 @@
+#new_session {
+  text-align: left;;
+  padding-top: 200px;
+  margin-top:15%;
+  margin-left: 10%;
+  margin-bottom: -13%;
+  font-size: 6em;
+  color:white;
+}
 
-.sign_up_form {
 
+.login_form{
   margin: auto;
-  margin-top: 15em;
+  padding-top: 10em;
   padding-left: 10px;
   padding-bottom: 10px;
 
 }
-.sign_up_form .field input{
+
+.login_form .field label {
+  color: white;
+}
+.login_form .field {
+  margin-bottom: 20px;
+}
+
+.login_form input {
   border-style: none;
   border-radius: 5px;
   padding: 5px;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-left:40px;
-  font-size: .8em;
+  font-size: 4em;
 }
-
-.sign_up_form input:focus {
+.login_form input:focus {
   outline: none;
-}
-.upload {
-  background-color: #29ccc0;
-  color:white;
-  text-shadow: 2px 2px #666;
-}
-
-
-  .photo .profile_pic {
-  background-color: #29ccc0;
-  color:white;
-  text-shadow: 2px 2px #666;
-  border-style: none;
-  border-radius: 5px;
-  padding: 5px;
-  margin-top: 80px;
-  margin-left: 30px;
-  width: 420px;
-  height: 100px;
 }

@@ -1,0 +1,134 @@
+
+.sign_up_form {
+
+  margin: auto;
+  padding-left: 10px;
+  padding-bottom: 10px;
+
+}
+
+
+
+.sign_up_form .field input{
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 80px;
+  margin-left:40px;
+  font-size: .8em;
+}
+
+.sign_up_form input:focus {
+  outline: none;
+}
+.upload {
+  background-color: #29ccc0;
+  color:white;
+  text-shadow: 2px 2px #666;
+}
+
+
+.photo .profile_pic {
+  background-color: #29ccc0;
+  color:white;
+  text-shadow: 2px 2px #666;
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 80px;
+  margin-left: 30px;
+  width: 420px;
+  height: 100px;
+}
+.sign_up_title {
+  text-align: left;;
+  padding-top: 200px;
+  margin-top:15%;
+  margin-left: 10%;
+  margin-bottom: -13%;
+  font-size: 6em;
+  color:white;
+}
+.top_bar {
+  text-align: center;
+  font-size: 5em;
+  color:white;
+  margin-top:1.2em;
+  text-shadow: 2px 2px #666;
+}
+.pic {
+  color:white;
+  font-size: 3em;
+  margin-top: -22%;
+  margin-left: 6%;
+  text-shadow: 2px 2px #666;
+}
+
+.all_users {
+  width:85%;
+  float:left;
+  margin-top: 30%;
+}
+
+.empty {
+  height: 12em;
+}
+.Letter, .cont_names{
+  color:white;
+}
+
+.Letter ul{
+  list-style: none;
+}
+.contact_elements {
+  display: inline-block;
+}
+
+.cont_pic {
+  float: left;
+
+}
+.contact_name {
+
+  margin-top: 75px;
+  margin-left:80px;;
+  float: right;
+  font-size: 3em;
+
+}
+
+.upcase {
+  margin-left: 5%;
+}
+
+.user_pic {
+  margin-top: 1em;
+  border-radius: 90px;
+  border: 5px solid #29ccc0;
+}
+.current_user_pic {
+  margin: 3em 1em 0em 2em;
+  border-radius: 115px;
+  float: left;
+  border: 5px solid white;
+}
+
+.users_index_title {
+  text-align: center;
+  font-size: 5em;
+  color: white;
+  margin-top: 5%;
+  margin-left: 15%;
+}
+
+#back-to-profile {
+  color: white;
+  font-size: 3em;
+  float: right;
+  margin-right: 1.5em;
+  padding-top: .5em;
+
+}
+
+.users_header {
+  width: 100%;

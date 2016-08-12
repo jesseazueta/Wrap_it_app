@@ -1,19 +1,36 @@
-
-<%=image_tag(current_user.image, height:'175px', width: '175px',class: "item_pic" )%>
-<h1> <%= link_to current_user.first_name + " " + current_user.last_name, current_user, id:"back-to-profile", data: { current_user_id: current_user.id } %>'s on Wrap-It!</h1>
-<h1>People on Wrap it!</h1>
-<% @list.each do |letter, users| %>  
-  <h1><%=letter.upcase%></h1>
+<div class="header">
+  <%=image_tag(current_user.image, height:'230px', width: '230px',class: "current_user_pic" )%>
+  <h1 class="current_user_name"> <%= link_to current_user.first_name + " " + current_user.last_name, current_user, id:"back-to-profile", data: { current_user_id: current_user.id } %></h1>
+</div>
+<div class="all_users">
+  <div class="users_header">
+    <h1 class="users_index_title">People on Wrap-It!</h1>
+  </div>
+  <% @list.each do |letter, users| %>
+  <div class="Letter" id ="contact_list_<%= letter %>">
+    <h1 class="upcase"><%=letter.upcase%></h1>
     <% users.each do |user| %>
-      <% unless user == current_user || current_user.friends.include?(user) %>
-  <ul>
-    <li>
-        <%=image_tag(user.image, height:'175px', width: '175px',class: "item_pic")%>
-        <strong><%=user.first_name + " " + user.last_name%></strong>
-        <button class="add-friend" data-user-id=<%= user.id %> >Add Friend</button>
-    </li>
-  </ul>
-      <% end %>
-</br>
+    <% unless user == current_user || current_user.friends.include?(user) %>
+    <ul>
+      <li>
+        <div class="contact_elements">
+
+          <div class="cont_pic">
+            <%=image_tag(user.image, height:'175px', width: '175px',class: "user_pic")%>
+          </div>
+          <div class="contact_name">
+            <strong ><%=user.first_name + " " + user.last_name%></strong>
+            <button class="add-friend" data-user-id=<%= user.id %> >Add Friend</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <% end %>
+  </br>
   <% end %>
-<% end %>
+  <% end %>
+  <div class="empty">
+  </div>
+</div>
+<footer>
+</footer>
