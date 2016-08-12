@@ -5,7 +5,6 @@ $(document).on('turbolinks:load', function() {
 		var currentUser = $('#back-to-profile').attr('data-current-user-id');
 		$.post('/friendships', { friendship: { user_id: currentUser, friend_id: newFriendId } },
 			function(){
-				console.log('yay');
 				$(button).replaceWith('Friends!');
 			}
 		);

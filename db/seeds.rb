@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 def add_gifts
-	gift_list = [{name: "Waffle Iron", category: "All", model: "z66Wafflenator", price: 200,},
+	gift_list = [{name: "Waffle Iron", category: "All", model: "z66Wafflenator", price: 200},
 		{name: "Televison", category: "Electronics", model: "Sony 24", price: 800},
 		{name: "Cards Against Humanity Card Game", category: "Toys", model: "Original", price: 25},
 		{name: "Ray Ban Sunglasses", category: "Fashion", model: "Aviators", price: 200},
-		{name: "Leather Jacket" category: "Fashion", model: "Italian Stallion", price: 300},
+		{name: "Leather Jacket", category: "Fashion", model: "Italian Stallion", price: 300},
 		{name: "Demon Stone", category: "Electronics", model: "PS2", price: 28},
 		{name: "Davidoff Cologne", category: "All", model: "Cool Water", price: 60}]
 		users = User.all
