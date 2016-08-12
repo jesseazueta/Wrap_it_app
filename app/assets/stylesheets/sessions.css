@@ -1,3 +1,40 @@
-.sign_in_info {
-  margin-top: 10em;
+
+.sign_up_form {
+
+  margin: auto;
+  margin-top: 15em;
+  padding-left: 10px;
+  padding-bottom: 10px;
+
+}
+.sign_up_form .field input{
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 80px;
+  margin-left:40px;
+  font-size: .8em;
+}
+
+.sign_up_form input:focus {
+  outline: none;
+}
+.upload {
+  background-color: #29ccc0;
+  color:white;
+  text-shadow: 2px 2px #666;
+}
+
+
+  .photo .profile_pic {
+  background-color: #29ccc0;
+  color:white;
+  text-shadow: 2px 2px #666;
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 80px;
+  margin-left: 30px;
+  width: 420px;
+  height: 100px;
 }

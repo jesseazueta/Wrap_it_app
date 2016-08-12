@@ -1,12 +1,33 @@
+<div class="sign_up_form">
 
 <%= form_for @user do |f| %>
-<ul>
-  <li><%= f.text_field :first_name, placeholder: "First Name" %></li>
-  <li><%= f.text_field :last_name, placeholder: "Last Name" %></li>
-  <li><%= f.text_field :email, placeholder: "Email: john@example.com" %></li>
-  <li><button><%= f.file_field :image%></button></li>
-  <li><%= f.password_field :password, placeholder: "Password" %></li>
-  <li><%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %></li>
-  <li><%= f.submit "Make Profile" %></li>
-</ul>
+<div class="field">
+  <%= f.text_field :first_name, placeholder: "First Name" %>
+</div>
+
+<div class="field">
+  <%= f.text_field :last_name, placeholder: "Last Name" %>
+</div>
+
+<div class="field">
+  <%= f.text_field :email, placeholder: "Email: joe@gmail.com" %>
+</div>
+
+
+<div class="field">
+  <%= f.password_field :password, placeholder: "Password" %>
+</div>
+
+<div class="field">
+  <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+</div>
+
+<div class="photo">
+  <button><%= f.file_field :image,:class => 'profile_pic', :style=>"font-size:35px" %></button>
+</div>
+
+<div class="field">
+  <%= f.submit "Create Profile", :class => 'upload'%>
+</div>
 <% end %>
+</div>
