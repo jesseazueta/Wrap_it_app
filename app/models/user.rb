@@ -23,12 +23,4 @@ class User < ApplicationRecord
         .group_by{ |user| user.last_name[0] }
   end 
 
-  def future_friends
-    User.where.not(id: self.friends)
-    .where.not(id: self)
-    .order(:last_name)
-    .group_by{ |user| user.last_name[0] }
-  end
-
-
 end
