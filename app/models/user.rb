@@ -15,6 +15,13 @@ class User < ApplicationRecord
   # has_many :inverse_friends, :through => :friendships, :foreign_key => :friend_id
   has_many :gifts, dependent: :destroy
   has_secure_password
+  
+  def future_friends
+    User.where.not(id: self.friends)
+        .where.not(id: self)
+        .order(:last_name)
+        .group_by{ |user| user.last_name[0] }
+  end 
 
   def future_friends
     User.where.not(id: self.friends)

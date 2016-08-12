@@ -7,8 +7,6 @@ class UsersController < ApplicationController
   def index
     # @users = User.all.order(:last_name).all
     @future_friends = current_user.future_friends
-    #
-    # @contact= Contact.new
   end
 
   def show
