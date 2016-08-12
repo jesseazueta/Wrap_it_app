@@ -37,12 +37,11 @@
   <div class="users_header">
     <h1 class="users_index_title">People on Wrap-It!</h1>
   </div>
-  <% @list.each do |letter, users| %>
+  <% @future_friends.each do |letter, users| %>
   <div class="Letter" id ="contact_list_<%= letter %>">
     <h1 class="upcase"><%=letter.upcase%></h1>
   </div>
   <% users.each do |user| %>
-  <% unless user == current_user || current_user.friends.include?(user) %>
   <ul>
     <li>
       <div class="contact_elements">
@@ -59,7 +58,6 @@
   </ul>
   <% end %>
 </br>
-<% end %>
 <% end %>
 <div class="empty">
 </div>
