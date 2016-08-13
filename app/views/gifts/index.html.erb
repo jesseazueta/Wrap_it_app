@@ -1,59 +1,67 @@
-<%= notice %></br>
+<header id="gift-index-header">
 
-<!-- List all gifts of current user: your own wishlist && wishlist for your contacts/friends -->
-<%=image_tag(@user.image, height:'175px', width: '175px',class: "item_pic")%>
-<h1> <%= @user.first_name + " " + @user.last_name%>'s Wrap-It! List</h1>
-<% if @user == current_user%>
-<% if params[:category] %>
-<ul>
-  <% @category_gifts.each do | gift | %>
-  <li>
-    <%= link_to gift.name, gift%>
-    (<%= link_to "Edit Item", edit_gift_path(gift)%>)
-    (<%= link_to "Remove Item", gift, :method => :delete %>)
-  </li>
+</header>
+
+<div id="gifts-index-center">
+  <% @users_gifts.each do | gift | %>
+  <div class="gifts-loop-outer">
+
+    <div class="gifts-loop-item">
+      <%= link_to gift.name, gift%>
+    </div>
+
+    <% if @user != current_user %>
+    <div class="gifts-loop-item">
+      <%= gift.purchased %>
+    </div>
+    <% end %>
+
+    <% if @user == current_user%>
+    <div class="gifts-loop-item">
+      (<%= link_to "Edit Item", edit_gift_path(gift)%>)
+    </div>
+
+    <div class="gifts-loop-item">
+      (<%= link_to "Remove Item", gift, :method => :delete %>)
+    </div>
+  </div>
   <% end %>
-</ul>
-<% else %>
-<ul>
-  <% @users_gifts.each do |gift| %>
-  <li>
-    <%= link_to gift.name, gift%>
-    (<%= link_to "Edit Item", edit_gift_path(gift)%>)
-    (<%= link_to "Remove Item", gift, :method => :delete %>)
-  </li>
   <% end %>
-</ul>
-<% end %>
-<% else %>
-<% if params[:category] %>
-<ul>
-  <% @category_gifts.each do | gift | %>
-  <li>
-    <%= link_to gift.name, gift%>
-    <%= gift.purchased %>
-  </li>
-  <% end %>
-</ul>
-<% else %>
-<ul>
-  <% @users_gifts.each do |gift| %>
-  <li>
-    <%= link_to gift.name, gift%>
-    <%= gift.purchased %>
-
-  </li>
-  <% end %>
-</ul>
-<% end %>
-<% end %>
+</div>
 
 
 
+<footer>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-user" aria-hidden="true"></i>'.html_safe, "/contacts/#{current_user.id}"%>
+    </div>
+    <div class="text">
+      <%= link_to "Contacts", "/contacts/#{current_user.id}"%>
+    </div>
+  </div>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-gift" aria-hidden="true"></i>'.html_safe, "/users/#{current_user.id}"%>
+    </div>
+    <div class="text">
+      <%= link_to "Wrap-It! List", "/users/#{current_user.id}" %>
+    </div>
+  </div>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_gift_path%>
+    </div>
+    <div class="text">
+      <%= link_to "Add To List", new_gift_path %>
+    </div>
+  </div>
+</footer>
 
 
 
-<%= link_to "Find Friends", users_path %>
-<%= link_to "Add item to list", new_gift_path %>
-<%= link_to "Back to Profile", current_user %>
-<%=link_to "Friends", "/contacts/#{current_user.id}" %>
+
+<%#= link_to "Find Friends", users_path %>
+<%#= link_to "Add item to list", new_gift_path %> l
+<%#= link_to "Back to Profile", current_user %>
+<%#=link_to "Friends", "/contacts/#{current_user.id}" %>

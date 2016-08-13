@@ -70,8 +70,8 @@ footer {
   justify-content: space-around;
   position: fixed;
   bottom: 0;
-  height:12%;
-  background-color: #55d6cd;
+  min-height:12%;
+  background-color: #29ccc0;
   border-top: 5px solid white;
   width:100%;
   z-index: 99;
