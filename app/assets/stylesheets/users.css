@@ -184,43 +184,24 @@
 }
 
 .add-friend a{
-
   color:white;
 }
-.footer_icons li {
-  display: inline-block;
-  font-size: 80px;
-  color:white;
-  text-shadow: 2px 2px #666;
+.footer_button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
-.footer_icon_names li{
-  display: inline-block;
-  list-style: none;
-  font-size: 2.8em;
-  margin:-10px 30px 80px 70px;
-  color:white;
-  text-shadow: 2px 2px #666;
-}
-.footer_icon_names,.footer_icons {
-  margin-right: 15px;
-}
-.footer_icon_names,.footer_icons, a{
+.image a{
+  color: white;
+  font-size: 5em;
   text-decoration: none;
-  color:white;
+  text-shadow: 2px 2px #666;
 }
-.fa-user:before{
-  margin-left:70%;
-  font-size: 100px;
-}
-.fa-gift:before {
-  margin-left:118%;
-  font-size: 100px;
-}
-.fa-envelope:before {
-  margin:0 15;
-}
-.fa-plus:before {
-  margin-left:195%;
+.text a{
+  color: white;
+  font-size: 3em;
+  text-decoration: none;
+  text-shadow: 2px 2px #666;
 }
