@@ -3,8 +3,11 @@
 	min-height: 20vh;
 	min-width: 100%;
 }
-header {
+header, .All {
 	background-color: rgb(106, 216, 65);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("personal_logo.png");
 }
 
  .Fashion{
@@ -49,6 +52,7 @@ header {
     flex: 1 1 auto;
     border: 1px solid grey;
     background-color: rgb(255, 255, 255);
+		padding-left: 4em;
 }
   .gifts-loop-item {
  	min-height: 10vh;
@@ -61,4 +65,17 @@ header {
 	 text-decoration: none;
 	 color: grey;
 	 font-size: 3em;
+	 margin: 0 1rem;
+ }
+
+ .edit {
+	 background-color: rgb(255, 255, 255);
+	 border: 1px solid thin rgb(255, 255, 255);
+	 border-radius: 6px;
+ }
+
+ .remove {
+	 background-color: rgb(255, 255, 255);
+	 border: 1px solid thin rgb(255, 255, 255);
+	 border-radius: 6px;
  }

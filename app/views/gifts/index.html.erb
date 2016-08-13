@@ -17,11 +17,11 @@
 
     <% if @user == current_user%>
     <div class="gifts-loop-item">
-      (<%= link_to "Edit Item", edit_gift_path(gift)%>)
+      <button class="edit"><%= link_to "Edit", edit_gift_path(gift)%></button>
     </div>
 
     <div class="gifts-loop-item">
-      (<%= link_to "Remove Item", gift, :method => :delete %>)
+      <button class="remove"><%= link_to "Remove", gift, :method => :delete %></button>
     </div>
   </div>
   <% end %>
