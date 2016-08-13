@@ -66,16 +66,28 @@
 </div>
 </div>
 <footer>
-  <div class="nav_tools">
-  <ul class="footer_icons">
-    <%= link_to '<i class="fa fa-user" aria-hidden="true"></i>'.html_safe, users_path%>
-  <%= link_to '<i class="fa fa-gift" aria-hidden="true"></i>'.html_safe, "/users/#{current_user.id}"%>
-  <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_gift_path%>
-  </ul>
-  <ul class="footer_icon_names">
-    <li><%= link_to "People", users_path %> </li>
-    <li><%= link_to "Wrap-It! List", "/users/#{current_user.id}"%></li>
-    <li><%= link_to "Add To List", new_gift_path %></li>
-  </ul>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-user" aria-hidden="true"></i>'.html_safe, users_path%>
+    </div>
+    <div class="text">
+      <%= link_to "People", users_path%>
+    </div>
+  </div>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-gift" aria-hidden="true"></i>'.html_safe, "/users/#{current_user.id}"%>
+    </div>
+    <div class="text">
+      <%= link_to "Wrap-It! List", "/users/#{current_user.id}" %>
+    </div>
+  </div>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_gift_path%>
+    </div>
+    <div class="text">
+      <%= link_to "Add To List", new_gift_path %>
+    </div>
 </div>
 </footer>
