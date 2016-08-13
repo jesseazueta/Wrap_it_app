@@ -8,16 +8,25 @@ header {
 }
 
  .Fashion{
+	background-image: url("fashion_logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
 	background-color: rgb(64, 203, 242);
 	border: 3px solid rgb(64, 203, 242);
 }
 
  .Electronics {
+	background-image: url("Electronic_logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
 	background-color: rgb(255, 143, 8);
 	border: 3px solid rgb(255, 143, 8);
 }
 
  .Toys {
+	background-image: url("toys_logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
 	background-color: rgb(88, 123, 187);
 	border: 3px solid rgb(88, 123, 187);
 }
