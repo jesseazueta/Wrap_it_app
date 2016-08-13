@@ -1,12 +1,31 @@
-#gift-index-header {
-	min-height: 13vh;
-	width: 100%;
-	border: 3px solid orange;
-	background-color: orange;
-	position: fixed;
 
+#gift-index-header {
+	min-height: 20vh;
+	min-width: 100%;
+}
+header {
+	background-color: rgb(106, 216, 65);
 }
 
+ .Fashion{
+	background-color: rgb(64, 203, 242);
+	border: 3px solid rgb(64, 203, 242);
+}
+
+ .Electronics {
+	background-color: rgb(255, 143, 8);
+	border: 3px solid rgb(255, 143, 8);
+}
+
+ .Toys {
+	background-color: rgb(88, 123, 187);
+	border: 3px solid rgb(88, 123, 187);
+}
+
+/*HEADER*/
+/*HEADER*/
+/*HEADER*/
+/*HEADER*/
 #gifts-index-center {
 	/*height: 50vh;*/
     border: 1px solid green;
@@ -14,15 +33,23 @@
     flex-direction: column;
 }
 .gifts-loop-outer {
-	
+
 	display: flex;
     justify-content: flex-start;
     align-items: center;
     flex: 1 1 auto;
-    border: 1px solid pink;
+    border: 1px solid grey;
     background-color: rgb(255, 255, 255);
 }
- .gifts-loop-item {
+  .gifts-loop-item {
  	min-height: 10vh;
- 	
+	display:flex;
+	align-items: center;
+	align-content: center;
+ }
+
+ .gifts-loop-item a {
+	 text-decoration: none;
+	 color: grey;
+	 font-size: 3em;
  }
