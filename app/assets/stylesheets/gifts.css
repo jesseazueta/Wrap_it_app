@@ -1,12 +1,43 @@
-#gift-index-header {
-	min-height: 13vh;
-	width: 100%;
-	border: 3px solid orange;
-	background-color: orange;
-	position: fixed;
 
+#gift-index-header {
+	min-height: 20vh;
+	min-width: 100%;
+}
+header, .All {
+	background-color: rgb(106, 216, 65);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("personal_logo.png");
 }
 
+ .Fashion{
+	background-image: url("fashion_logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgb(64, 203, 242);
+	border: 3px solid rgb(64, 203, 242);
+}
+
+ .Electronics {
+	background-image: url("Electronic_logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgb(255, 143, 8);
+	border: 3px solid rgb(255, 143, 8);
+}
+
+ .Toys {
+	background-image: url("toys_logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgb(88, 123, 187);
+	border: 3px solid rgb(88, 123, 187);
+}
+
+/*HEADER*/
+/*HEADER*/
+/*HEADER*/
+/*HEADER*/
 #gifts-index-center {
 	/*height: 50vh;*/
     border: 1px solid green;
@@ -14,15 +45,37 @@
     flex-direction: column;
 }
 .gifts-loop-outer {
-	
+
 	display: flex;
     justify-content: flex-start;
     align-items: center;
     flex: 1 1 auto;
-    border: 1px solid pink;
+    border: 1px solid grey;
     background-color: rgb(255, 255, 255);
+		padding-left: 4em;
 }
- .gifts-loop-item {
+  .gifts-loop-item {
  	min-height: 10vh;
- 	
+	display:flex;
+	align-items: center;
+	align-content: center;
+ }
+
+ .gifts-loop-item a {
+	 text-decoration: none;
+	 color: grey;
+	 font-size: 3em;
+	 margin: 0 1rem;
+ }
+
+ .edit {
+	 background-color: rgb(255, 255, 255);
+	 border: 1px solid thin rgb(255, 255, 255);
+	 border-radius: 6px;
+ }
+
+ .remove {
+	 background-color: rgb(255, 255, 255);
+	 border: 1px solid thin rgb(255, 255, 255);
+	 border-radius: 6px;
  }

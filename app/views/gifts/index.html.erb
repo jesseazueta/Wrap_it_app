@@ -1,7 +1,6 @@
-<header id="gift-index-header">
 
+<header id="gift-index-header" class="<%=params[:category]%>" >
 </header>
-
 <div id="gifts-index-center">
   <% @users_gifts.each do | gift | %>
   <div class="gifts-loop-outer">
@@ -18,11 +17,11 @@
 
     <% if @user == current_user%>
     <div class="gifts-loop-item">
-      (<%= link_to "Edit Item", edit_gift_path(gift)%>)
+      <button class="edit"><%= link_to "Edit", edit_gift_path(gift)%></button>
     </div>
 
     <div class="gifts-loop-item">
-      (<%= link_to "Remove Item", gift, :method => :delete %>)
+      <button class="remove"><%= link_to "Remove", gift, :method => :delete %></button>
     </div>
   </div>
   <% end %>
@@ -57,11 +56,3 @@
     </div>
   </div>
 </footer>
-
-
-
-
-<%#= link_to "Find Friends", users_path %>
-<%#= link_to "Add item to list", new_gift_path %> l
-<%#= link_to "Back to Profile", current_user %>
-<%#=link_to "Friends", "/contacts/#{current_user.id}" %>
