@@ -1,3 +1,18 @@
-<%= render 'form', user: @user %>
+<div class="header">
+  <%=link_to image_tag(current_user.image, height:'230px', width: '230px',class: "current_user_pic" ),current_user, id:"back-to-profile", data: { current_user_id: current_user.id }%>
+  <h1 class="current_user_name"> <%= link_to current_user.first_name + " " + current_user.last_name,current_user, id:"back-to-profile", data: { current_user_id: current_user.id } %></h1>
+</div>
 
-<%= link_to "Back", current_user %>
+<h1 class="edit_profile_title">Edit Profile</h1>
+<div class="edit_info">
+
+  <%= render 'form', user: @user %>
+</div>
+<h2 class="pic">Profile Pic</h2>
+
+<footer>
+  <div class="footer_message">
+    <%= link_to "Back", current_user %>
+
+  </div>
+</footer>

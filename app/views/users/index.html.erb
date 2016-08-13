@@ -1,6 +1,6 @@
 <div class="header">
-  <%=image_tag(current_user.image, height:'230px', width: '230px',class: "current_user_pic" )%>
-  <h1 class="current_user_name"> <%= link_to current_user.first_name + " " + current_user.last_name, current_user, id:"back-to-profile", data: { current_user_id: current_user.id } %></h1>
+  <%=link_to image_tag(current_user.image, height:'230px', width: '230px',class: "current_user_pic"), "/users/#{current_user.id}/edit"%>
+  <h1 class="current_user_name"> <%= link_to current_user.first_name + " " + current_user.last_name,current_user, id:"back-to-profile", data: { current_user_id: current_user.id } %></h1>
 </div>
 <div id="alphabet">
   <ul>
@@ -45,20 +45,22 @@
   <ul>
     <li>
       <div class="contact_elements">
-
         <div class="cont_pic">
           <%=image_tag(user.image, height:'175px', width: '175px',class: "user_pic")%>
         </div>
         <div class="contact_name">
           <strong ><%=user.first_name + " " + user.last_name%></strong>
+        </div>
+        <div class="friend_button">
           <button class="add-friend" data-user-id=<%= user.id %> >Add Friend</button>
         </div>
-      </div>
+        </div>
     </li>
   </ul>
-  <% end %>
 </br>
-<% end %>
+  <% end %>
+  <% end %>
+</div>
 <div class="empty">
 </div>
 </div>

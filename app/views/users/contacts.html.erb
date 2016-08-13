@@ -1,7 +1,6 @@
 <div class="header">
-<%=image_tag(current_user.image, height:'230px', width: '230px',class: "current_user_pic")%>
-<h1><%= link_to @user.first_name + " " + @user.last_name, edit_user_path
-%></h1>
+  <%=link_to image_tag(current_user.image, height:'230px', width: '230px',class: "current_user_pic"), "/users/#{current_user.id}/edit"%>
+  <h1 class="current_user_name"> <%= link_to current_user.first_name + " " + current_user.last_name,current_user, id:"back-to-profile", data: { current_user_id: current_user.id } %></h1>
 </div>
 
 <div id="alphabet">

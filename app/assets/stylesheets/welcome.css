@@ -1,14 +1,16 @@
 *{
 
-  font-family: 'Fjalla One', sans-serif;
+  /*font-family: 'Fjalla One', sans-serif;*/
 
+font-family: 'Work Sans', sans-serif;
+font-weight: bold;
 
 }
 
 
 .header{
-  background-color: #29ccc0;
-  height: 18%;
+  background-color: #55d6cd;
+  max-height:20%;
   border-bottom: 5px solid white;
   width: 100%;
   position: fixed;
@@ -23,19 +25,42 @@
   font-size: 4em;
   padding-top: 1em;
 }
-#greeting,.new_user, .return_user, .or,.footer_message,.title {
-  text-shadow: 2px 2px #666;
+#greeting,.footer_message,.title {
+  text-shadow: 4px 4px #666;
   color:white;
 
 }
+
 .new_user, .return_user, .or {
 
   font-size: 3.5em;
-  margin-right: .5em;
+  margin-left: -13%;
+  margin-right: 2%;
   padding-top: 1.5em;
+  color: #55d6cd;
+  text-shadow: 2px 2px #666;
+  font-weight: bolder;
+
+}
+
+.enter button{
+  background-color:#55d6cd;
+  height:75px;
+  width: 220px;
+  font-size: .8em;
+  color:white;
+  text-shadow: 4px 4px #666;
+}
+
+.sign_up_button{
+  margin-right: 15%;
+  margin-left: -5%;
+}
+.log_in_button{
+  margin-left: 12%;
 }
 .enter {
-  margin-left: 17em;
+  margin-left: 33%;
   margin-top: 9em;
 }
 
@@ -46,27 +71,28 @@ footer {
   position: fixed;
   bottom: 0;
   height:12%;
-  background-color: #29ccc0;
+  background-color: #55d6cd;
   border-top: 5px solid white;
   width:100%;
   z-index: 99;
 }
 .footer_message {
   text-align: center;
-  font-size: 3.5em;
-  margin-top: 1em;
+  font-size: 3.8em;
+
 }
 .present {
   margin-top: 30em;
   margin-left: 5.5em;
-  -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
   filter: url(#drop-shadow);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#44;4')";
   z-index: 2;
 }
 .title {
   text-align: center;
   font-size: 12em;
-  margin-top: .5em;
+  margin-top: .2em;
+  color: #55d6cd;
 }

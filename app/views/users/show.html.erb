@@ -1,16 +1,60 @@
 
-<a href="/logout">Log Out</a></br>
-<%=image_tag(@user.image, height:'175px', width: '175px',class: "item_pic")%>
-<%= link_to "Edit Profile", edit_user_path %>
-<h1><%=@user.first_name + " " + @user.last_name%>'s Profile!</h1>
+<div class="header">
+  <a href="/logout" class="log_out_button">Log Out</a>
+  <%=link_to image_tag(current_user.image, height:'230px', width: '230px',class: "current_user_pic"), "/users/#{current_user.id}/edit"%>
+  <h1 class="current_user_name"> <%= link_to current_user.first_name + " " + current_user.last_name,current_user, id:"back-to-profile", data: { current_user_id: current_user.id } %></h1>
+  <h1 class ="profile_title">Wrap-It! List</h1>
+</div>
+
+<h1 class="wrap_it">Wrap-It!</h1>
+<div class="all_button">
+  <a href=" /users/<%=@current_user.id%>/gifts"><img src="https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=13177545a0&view=att&th=15678ad38d1c0315&attid=0.20&disp=safe&realattid=f_irq1u4fc19&zw&saddbat=ANGjdJ8lpHXoZu2sDQotaA2sTrryCMO3o2UZKfqoZZW7lE3-bRUlhMlqIRzz7xKDmXOMi5RIAZSEXjG8Xkt6P4q6CoBAmTuD694yZZmsQe-ZsbuPG65oIicSHWMKM_RtFoeU-HkMdv_zYU7kNeM8GVvbNAb6evO6eUaA7ak_QU5VH7sZdsQy7gPe6z-iDAX2hRZHXXZuzDyDTl-dFtFNpNM5Rgt7dYHR9_Q04odtekLCvztxiTyLgxSpp52XiNWARLeU9uSxjLwn8I4hSGtokPbWssRJbZOHIOi2RNAVuDW8NNwtV5xWo6vt8O-_uo-BDaHAb6iyr9oBzjYmc1rdi0wQQiQ2DsHNmUIwQ4t6LxRyehlz5q2KUTwQQ5sgwcajDSJJbXWXlApW3vNEt8T7rzCIyn7vaR4TmJ6n-7Je4_wy3MUBYv0k5_T0-7YDHGswrJQRZ-AP2RN69xldpcKsKkPZLMWnaUg0LOXx5CVV1xBsUvRJWzxR8jkOd12_pI445a2CRj2L3NumREfxmN7DsicJKv59PDEwi7dVN31_JL2RTuvKDgNfWIIP3jq13WG_52QxaPJbHNidiqBFLQWXED9R-0-MhEVKKdg1tNlxzH9ugV3MDzx0Qha3j27bEGFPztNBsYe7QQGwWytOMtdh" alt="" /></a>
+</div>
+
+<%#=link_to "View All", "/users/#{@user.id}/gifts"%>
+<div class="container">
+  <div class="row_top">
+    <a href="<%= "/users/#{@user.id}/gifts/Electronics"%>" class ="link"><div class="electronics_cont">
+    </div></a>
+    <a href="<%= "/users/#{@user.id}/gifts/Fashion"%>" class ="link"><div class="fashion_cont">
+    </div></a>
+  </div>
+  <div class="row_bottom">
+    <a href="<%= "/users/#{@user.id}/gifts/All"%>" class ="link"><div class="personal_cont">
+    </div></a>
+    <a href="<%= "/users/#{@user.id}/gifts/Toys"%>" class ="link"><div class="toys_cont">
+    </div></a>
+  </div>
+
+</div>
+<footer>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-user" aria-hidden="true"></i>'.html_safe, "/contacts/#{current_user.id}"%>
+    </div>
+    <div class="text">
+      <%= link_to "Contacts", "/contacts/#{current_user.id}"%>
+    </div>
+  </div>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-envelope-o" aria-hidden="true"></i>'.html_safe, users_path%>
+    </div>
+    <div class="text">
+      <%= link_to "Invite", users_path %>
+    </div>
+  </div>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_gift_path%>
+    </div>
+    <div class="text">
+      <%= link_to "Add To List", new_gift_path %>
+    </div>
+  </div>
+</footer>
 
 
-<%=link_to "Electronics", "/users/#{@user.id}/gifts/Electronics"%>
-<%=link_to "Fashion", "/users/#{@user.id}/gifts/Fashion"%>
-<%=link_to "Toys", "/users/#{@user.id}/gifts/Toys"%>
-<%=link_to "Personal", "/users/#{@user.id}/gifts/All"%>
-<%=link_to "View All", "/users/#{@user.id}/gifts"%>
-
-<%=link_to "Find Friends", users_path%>
-<%=link_to "Friends", "/contacts/#{@user.id}" %>
-<%=link_to "Add Item to List", new_gift_path %>
+<%#=link_to "Find Friends", users_path%>
+<%#=link_to "Friends", "/contacts/#{@user.id}" %>
+<%#=link_to "Add Item to List", new_gift_path %>
