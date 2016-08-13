@@ -4,9 +4,10 @@ class GiftsController < ApplicationController
 
   def index
     @user = User.find(params[:id])
-    @users_gifts = @user.gifts
     if params[:category]
-      @users_gifts = @users_gifts.where(category: params[:category])
+      @users_gifts = @user.gifts.where(category: params[:category])
+    else
+      @users_gifts = @user.gifts
     end
   end
 

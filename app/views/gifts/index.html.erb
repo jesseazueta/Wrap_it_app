@@ -1,23 +1,35 @@
-<%= notice %></br>
+<header id="gift-index-header">
 
-<!-- List all gifts of current user: your own wishlist && wishlist for your contacts/friends -->
-<%=image_tag(@user.image, height:'175px', width: '175px',class: "item_pic")%>
-<h1> <%= @user.first_name + " " + @user.last_name%>'s Wrap-It! List</h1>
+</header>
 
-<ul>
+<div id="gifts-index-center">
   <% @users_gifts.each do | gift | %>
-  <li>
-    <%= link_to gift.name, gift%>
+  <div class="gifts-loop-outer">
+
+    <div class="gifts-loop-item">
+      <%= link_to gift.name, gift%>
+    </div>
+
     <% if @user != current_user %>
-    <%= gift.purchased %>
+    <div class="gifts-loop-item">
+      <%= gift.purchased %>
+    </div>
     <% end %>
-<% if @user == current_user%>
-    (<%= link_to "Edit Item", edit_gift_path(gift)%>)
-    (<%= link_to "Remove Item", gift, :method => :delete %>)
-  </li>
+
+    <% if @user == current_user%>
+    <div class="gifts-loop-item">
+      (<%= link_to "Edit Item", edit_gift_path(gift)%>)
+    </div>
+
+    <div class="gifts-loop-item">
+      (<%= link_to "Remove Item", gift, :method => :delete %>)
+    </div>
+  </div>
   <% end %>
-</ul>
-<% end %>
+  <% end %>
+</div>
+
+
 
 <footer>
   <div class="footer_button">

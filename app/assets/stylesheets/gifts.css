@@ -1,0 +1,28 @@
+#gift-index-header {
+	min-height: 13vh;
+	width: 100%;
+	border: 3px solid orange;
+	background-color: orange;
+	position: fixed;
+
+}
+
+#gifts-index-center {
+	/*height: 50vh;*/
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+}
+.gifts-loop-outer {
+	
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 1 auto;
+    border: 1px solid pink;
+    background-color: rgb(255, 255, 255);
+}
+ .gifts-loop-item {
+ 	min-height: 10vh;
+ 	
+ }
