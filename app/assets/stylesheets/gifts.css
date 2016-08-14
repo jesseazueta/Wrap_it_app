@@ -51,6 +51,7 @@ header, .All {
 	border: 1px solid green;
 	display: flex;
 	flex-direction: column;
+	margin-top: 35%;
 }
 .gifts-loop-outer {
 
@@ -90,7 +91,7 @@ header, .All {
 
 .category_title {
 	color:white;
-	margin-top: 30%;
+	margin-top: 25%;
 	text-align: center;
 	margin-bottom: 1%;
 	font-size: 4em;
