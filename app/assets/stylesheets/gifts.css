@@ -1,8 +1,15 @@
 
 #gift-index-header {
-	min-height: 20vh;
+	max-height: 20vh;
 	min-width: 100%;
 	position: fixed;
+	top:0;
+}
+#gift-index-header i {
+	font-size: 65px;
+	color:white;
+	padding-top:5%;
+	padding-left: 5%;
 }
 header, .All {
 	background-color: rgb(106, 216, 65);
@@ -12,7 +19,7 @@ header, .All {
 }
 
 .Fashion{
-	background-image: url("fashion_logo.png");
+	background-image: url("fashion_logo2.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: rgb(64, 203, 242);
