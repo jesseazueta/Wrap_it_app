@@ -1,49 +1,72 @@
+<div class="header">
+  <%= link_to '<i class="fa fa-caret-left" aria-hidden="true"></i>'.html_safe, "/users/#{@user.id}/gifts" %>
+  <h1 class="header_item_message">Excellent Choice!</h1>
+</div>
 
-  <strong>Item Name:</strong>
-  <%= @gift.name %>
-</p>
+<div class="item_desc_container">
 
-<p>
-  <strong>Model #:</strong>
-  <%= @gift.model %>
-</p>
+  <div class="user_item_name">
 
-<p>
-  <strong>Price:</strong>
-  $<%= @gift.price.to_i %>
-</p>
+    <strong>Item Name:</strong>
+    <%= @gift.name %>
+  </div>
 
-<p>
-  <strong>Category:</strong>
-  <%= @gift.category %>
-</p>
-<p>
-  <strong>Store:</strong>
-  <%= @gift.store %>
-</p>
-<p>
-  <%if @gift.weblink.empty?%>
 
-  <strong>Weblink:</strong>
-  No link
-  <%else%>
-  <strong>Weblink:</strong>
-  <%= link_to 'See Item', @gift.weblink %>
-  <%end %>
-</p>
-<p>
-  <strong>Image:</strong>
-</br>
+  <div class="user_item_model">
+    <strong>Model #:</strong>
+    <%= @gift.model %>
+  </div>
+
+
+  <div class="user_item_price">
+    <strong>Price:</strong>
+    $<%= @gift.price.to_i %>
+  </div>
+
+
+  <div class="user_item_category">
+    <strong>Category:</strong>
+    <%= @gift.category %>
+  </div>
+  <div class="user_item_store">
+    <strong>Store:</strong>
+    <%= @gift.store %>
+  </div>
+  <div class="user_item_weblink">
+    <%if @gift.weblink.empty?%>
+
+    <strong>Weblink:</strong>
+    No link
+    <%else%>
+    <strong>Weblink:</strong>
+    <%= link_to 'See Item', @gift.weblink %>
+    <%end %>
+  </div>
+  <div class="user_item_image">
+    <strong>Image:</strong>
+  </br>
   <%=image_tag(@gift.image, height:'175px', width: '175px',class: "item_pic")%>
-</p>
+</div>
 
-<%= link_to "Back to Wrap-It! List", "/users/#{@user.id}/gifts" %>
+<div class="item_purchased">
+  <%= check_box_tag(id="purchased", name="purchase_status",checked=@gift.purchased) %>
 
-<button ><%= link_to "WRAP-IT!", :controller => "gifts", :action => "search", :id => @gift%></button>
+</div>
+
+<div class="wrap_it_button">
+
+  <button ><%= link_to "Wrap-It!", :controller => "gifts", :action => "search", :id => @gift%></button>
+</div>
+
+<div class="empty">
+
+</div>
+</div>
+<footer>
 
 
-<%= check_box_tag(id="purchased", name="purchase_status",checked=@gift.purchased) %>
+</footer>
 
 <!-- Notes for possible later implementation of same page gifts index updates -->
 <!-- #@gifts.each |gift|  -->
-  <!--<%#= check_box_tag(id=purchased"<%=gift.id%>" data-id= <%#="#{gift.id}", name="purchase_status",checked=gift.purchased) %> -->
+<!--<%#= check_box_tag(id=purchased"<%=gift.id%>" data-id= <%#="#{gift.id}", name="purchase_status",checked=gift.purchased) %> -->
