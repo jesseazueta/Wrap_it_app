@@ -1,8 +1,11 @@
 <div class="new-gift-title">
-<h1 class="new-gift-title">Add An Item to Your List!</h1>
+<h1 class="new-gift-h1">Add An Item to Your List!</h1>
 </div>
-
+<%#= link_to '<i class="fa fa-caret-left" aria-hidden="true"></i>'.html_safe, "/users/#{current_user.id}"%>
+<div class="test">
+	
 <%= render 'form', gift: @gift %>
+</div>
 
 
 
