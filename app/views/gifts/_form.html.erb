@@ -1,19 +1,46 @@
 <%= form_for @gift,html: { multipart: true } do |f| %>
+<div id="new-gift-form-outside">
+	<div class="nwg-inner">
+		<div>
+			<%= f.text_field :name, placeholder: "Name" %>
+		</div>
+		<div>
+			<%= f.text_field :model, placeholder: "Model" %>
+		</div>
+		<div>
+			<%= f.text_field :price, placeholder: "Price" %>
+		</div>
+		<div>
+			<%= f.text_field :weblink, placeholder: "Weblink" %>
+		</div>
+		<div class="nwg-i-1">
+			<div>
+				<%=  label(:gift, :image) %>
+			</div>
+			<div id="ng-file-field">
+				<%= f.file_field :image%>
+			</div>
+		</div>
 
-Item Name:
-<%= f.text_field :name %>
-Model #:
-<%= f.text_field :model %>
-Price:
-<%= f.text_field :price %>
-Category:
-<%=f.select(:category, options_for_select(["Electronics", "Fashion", "Toys", "All"]))%>
-Store:
-<%=f.select(:store, options_for_select(["Amazon", "Macy's", "Walmart", "Target"]))%>
-Weblink:
-<%= f.text_field :weblink%>
-Image:
-<%= f.file_field :image%>
-<%= f.submit "Submit" %>
+		<div class="nwg-i-1">
+			<div>
+				<%= label(:gift, "Store") %>
+			</div>
+			<div>
+				<%=f.select(:store, options_for_select(["Amazon", "Macy's", "Walmart", "Target"]))%>
+			</div>
+		</div>
+		<div class="nwg-i-1">
+			<div>
+				<%= label(:gift, :category) %>
+			</div>
+			<div>
+				<%=f.select(:category, options_for_select(["Electronics", "Fashion", "Toys", "All"]))%>
+			</div>
+		</div>
+		<div>
+			<%= f.submit "Submit" %>
+		</div>
 
-<% end %>
+	</div>
+	<% end %>
