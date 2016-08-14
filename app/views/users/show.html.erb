@@ -8,7 +8,7 @@
 
 <h1 class="wrap_it">Wrap-It!</h1>
 <div class="all_button">
-  <a href=" /users/<%=@current_user.id%>/gifts"><img src="https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=13177545a0&view=att&th=15678ad38d1c0315&attid=0.20&disp=safe&realattid=f_irq1u4fc19&zw&saddbat=ANGjdJ8lpHXoZu2sDQotaA2sTrryCMO3o2UZKfqoZZW7lE3-bRUlhMlqIRzz7xKDmXOMi5RIAZSEXjG8Xkt6P4q6CoBAmTuD694yZZmsQe-ZsbuPG65oIicSHWMKM_RtFoeU-HkMdv_zYU7kNeM8GVvbNAb6evO6eUaA7ak_QU5VH7sZdsQy7gPe6z-iDAX2hRZHXXZuzDyDTl-dFtFNpNM5Rgt7dYHR9_Q04odtekLCvztxiTyLgxSpp52XiNWARLeU9uSxjLwn8I4hSGtokPbWssRJbZOHIOi2RNAVuDW8NNwtV5xWo6vt8O-_uo-BDaHAb6iyr9oBzjYmc1rdi0wQQiQ2DsHNmUIwQ4t6LxRyehlz5q2KUTwQQ5sgwcajDSJJbXWXlApW3vNEt8T7rzCIyn7vaR4TmJ6n-7Je4_wy3MUBYv0k5_T0-7YDHGswrJQRZ-AP2RN69xldpcKsKkPZLMWnaUg0LOXx5CVV1xBsUvRJWzxR8jkOd12_pI445a2CRj2L3NumREfxmN7DsicJKv59PDEwi7dVN31_JL2RTuvKDgNfWIIP3jq13WG_52QxaPJbHNidiqBFLQWXED9R-0-MhEVKKdg1tNlxzH9ugV3MDzx0Qha3j27bEGFPztNBsYe7QQGwWytOMtdh" alt="" /></a>
+  <%= link_to image_tag("view_all.png"), "/users/#{@user.id}/gifts" %>
 </div>
 
 <%#=link_to "View All", "/users/#{@user.id}/gifts"%>
