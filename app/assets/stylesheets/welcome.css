@@ -10,13 +10,13 @@ font-weight: bold;
 
 .header{
   background-color: #55d6cd;
-  max-height:20%;
+  height:20%;
   border-bottom: 5px solid white;
   width: 100%;
   position: fixed;
   top:0;
-  background-image: url("https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=13177545a0&view=att&th=1567cbda3612af8a&attid=0.1&disp=safe&realattid=f_irr6imru0&zw&saddbat=ANGjdJ8sIbs49TFlcPJGgpo-GsbgAL8zng4WZpN5Uq6HNI09kj1vr4UKG4VlZ-dyX8BftidTOrzNJBX3DBEgnM0GtiqA4GnhmGB-xKFz0enkexoRrCbY80pxRkNIFH9bH3e-D8aikmp2nT9gsCw6xTKyXVqp9LaP6QUH01u9ZRsSZ_3tjdIzUx1pw1uVHeuEHWdfZhhQVUM4a4Er2VoSBeqNFD6ekKZ_XYVERRFYSmWX5FiZ7nCfEJlpR3O7HOprSZ-JYkEbc6T5mBwllpb3TyWrxoZDXYqsblJdp_j0PPKLCNGGCjXpZdKjC9odlDYiQhPt7AbGczRlibdVO0hucgU7964Sn0XaBFdDAkZU9niHxPb66BWNCEOyn2iu9OoRPyXkyqIlS2ZE6bz83-zWMcB4DUW9mFzA-Q78NrQtt2tfWqpQfqooU6odE9O0Y9G-_sGmFljophtJW8CONFIo_Gey0JArc3PGFL2D4gLvmPCE4D7FRdQu-4UVRMBxnckk_vdg9Y8lePerdkHz9KSuyIcw76ED6YYJcPbvYsqE8dGX4BQDxX5WadOEiX-SgqKFlR_GwPANgOIQU7v3GuKYoeUxDhQj7ygpLEbuP40apUZd7o15n7V4VShcna5T-9LAU2R-dL9w_orvSrRX0uTR");
-  background-size: cover;
+  background-image: url("effect.png");
+
 
 }
 

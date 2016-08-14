@@ -126,7 +126,7 @@
 }
 .current_user_pic {
   margin: 3em 1em 0em 2em;
-  border-radius: 115px;
+  border-radius: 120px;
   margin-top: 10%;
   float: left;
   border: 5px solid white;
@@ -142,7 +142,7 @@
 
 .current_user_name {
   color:white;
-  font-size: 6em;
+  font-size: 8vw;
   margin-right: 7%;
   margin-top: 10%;
 
@@ -184,6 +184,7 @@
   display: flex;
   flex-direction: column;
   background-color: white;
+  min-height:1280px;
 }
 
 .add-friend {
@@ -194,8 +195,6 @@
   background-color:#29ccc0;
   color:white;
   text-shadow: 2px 2px #666;
-
-
 }
 .friend_button {
   display: flex;
@@ -204,6 +203,7 @@
 
 .add-friend a{
   color:white;
+  text-decoration: none;
 }
 .footer_button {
   display: flex;
@@ -276,7 +276,7 @@
   margin-left: 26%;
   height:306px;
   width:354px;
-  background-image: url("https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=13177545a0&view=att&th=15678ad38d1c0315&attid=0.4&disp=safe&realattid=f_irq1u4c73&zw&saddbat=ANGjdJ8eiKdbBxwNf5wbe9XBztIITJBt0A41PpnNTLzg76MXVhdFyBMEuuUTEC913YxEmu5xKF6UfvNpJdBEEMQjKOy4Z-FYliZmm6Sm8spMgjsBVOOmLbXw_tps5dBVgKCHNZWoQ02I_ZbFF_JfPEAcRjRmH0OPHPj1n3YJVXNehmevGRaOL1_zgBmAINoncs2QzkvNWBGjkmanhl3bGjBZEAn4JESntAyO93KcyJlkv3LHOh-UgyGtndr9R_8vwM6S5uhw7FC7UngrYFgA4KzrB44coRamcUrEVloFy098RXNpCIyHg_Zga9JGEa17I-EvSykKUlnqQ4syVqv2kaUF29NQWgeu6Du5gKHyJLgr6-CEkRjSVPf0cLFsZwmCyjSikztO3PTG38inci5x4G8PVyTig3VFMfXdw_rWUxHH-achjEIA0QYbGlBiW3x-Hpn7ujvJ1HfDmrVw1WlA0S21eboK12LQQfzTMyeXgGvB_cDKieBy_NVQgsaxfqIkbRPa3BbMpFxdNO-8HvfmFr4QsyKQF69xu5ThW82YaYKmbDFfnIQWymhp5kCQsl-HHgN8eeewrez2B6H4pIu4s9jxAcYNIyZD650ri0k67tnBtHmSP3wsiyE_rPzA3nTTRV-m2GxhFSxwleUBCpMa" );
+  background-image: url("electronics_button.png" );
   background-size: cover;
 }
 .fashion_cont {
@@ -284,7 +284,7 @@
   margin-left: 28%;
   height:306px;
   width:354px;
-  background-image: url("https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=13177545a0&view=att&th=15678ad38d1c0315&attid=0.6&disp=safe&realattid=f_irq1u4cj5&zw&saddbat=ANGjdJ_WzA1vebi1oHaeMyVMO4O3mNT-CYg2TZUaon8j7V1wXle_9uXi7SfCZrg2JkiZJlfIyXLyxYaguJ3lYPQ0Wx7z7bOrCR5RhQXDtraDxzxFD-CsXppWeDqIjAe9bYnWIBHDIW1VtW_MpLvC4RywUWKya1OOx4b-XPVJtyhQylddFimCRwP-XzOyPvLcYU57r3P6bRoLgueqcIdfZGtO9NKi5u4p_Bne5n0YEkTqU1dxt7-dQusvc72mi7sxJkOoDCZSdpVizU29JORxdjsATI1SyXXh-lsvmRQDW3Fa7Gi0svBsShzydwszypVflahttMoDHCy3De_HolPAV-zHRxbHUhF1-KhPAj1Wuavox9k3t9dZ8yQ7Uwdck24xxrCkq9MgpUDHlVsyuaJRkwmF-baL3OF_kmbsLqxzKRKKhoXqyX3Lw677OQ-cU62EEsCCnQbdF5N-QBONddysxVx5lJbr3GINChMIuMoy4navMlZh7LCGKxSuKdM8AtF1hApOTFRnRUY-FNIsCHulMk64PfqMzDVokaZB2vToYN-7fnWuMeL3_ALJzU2wZOwfhOFeqxXgC7gvFgR07hbE2FZsGEi4Ue0ZDUP7qaP_fxJ3AVkRkNonBcwH_yPPChLxKn6G7b6VS_3ZiQvLLWbk" );
+  background-image: url("fashio_button.png" );
   background-size: cover;
 
 }
@@ -293,7 +293,7 @@
   margin-left: 28%;
   height:306px;
   width:354px;
-  background-image: url("https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=13177545a0&view=att&th=15678ad38d1c0315&attid=0.16&disp=safe&realattid=f_irq1u4ek15&zw&saddbat=ANGjdJ8eVD1USFWpPlWp3SSE3xKbEDNbU2qtZkbH3R0Kh9G0UVo6k5ldH4ll3yUNFYkCv3es00QXrOlW56R9zUz-OWiGFB2swmXxhg_jWk2oFza00-fST_KOE9gNNRcxuzW94sCj_D_aDWRfoiLKzi7aGbjEaVo1KjStxU6YUMhLFEiaTa4zBys4ttPWp5T2eVbimVWiZGkRXqn-AFZ53TKAc0oeTXMj0fzo8oopGPhQJ1JP_ujkdaOmXgDpEx48AueiNgVM83rSKqulDSWYink7LTATMRy6PJQWRgQTl-kbL53MnzELgtSnsiQKgJlEWMVqdUeJy3MweJicKPUO86NCJ4Zz6fZeLRd-T7yGu70J7ECmvpFtxti_cKm-dUvYOJwEZQCKYmVLcNBjd5evOuOw7YwZEO4RuCR1l9DDiFOg7NHx7MNZ23D3MhN31_BQv8yIEu0vr3Gm-XpZ4JT_nE6XquCmeYGhRkwjWJ2H3m5l8-4_8GZrABPudUC2Id3LsmDPo08XfxPrMZOJcKM-xf-YoBli4cFvK2zlRWI7a5XoYaVALOREdkh9WxyAqpYndbU0fIYzCiGcy-2Q0Vg808fk9jpEC_D75b7e9sdFXLscn28eT0szat_KwCfrQkSC-ztXRXl2MGvaqcnc7TiQ" );
+  background-image: url("toys_button.png" );
   background-size: cover;
 
 }
@@ -302,7 +302,7 @@
   margin-top: 2%;
   height:306px;
   width:354px;
-  background-image: url("https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=13177545a0&view=att&th=15682ae3f9c7be23&attid=0.1&disp=safe&realattid=f_irstue5t0&zw&saddbat=ANGjdJ-DiATCBP6UdbSUnjkfJ2jY4pGbQg092ubNbNX-fu1Yfnz9mju4ZgWX3BDMpugH9tsplgk8L_vt-YDHt9UnxgJ2ScDJ7ujBgmJ8YohdDxBpZ7KOo27QZ-jZ_KOY384ctXH8g4-J5wzCjlJaQ-UzFNa5vgPET6o9e5sAeeJsjVNfGXgYIIgaby8nwlG5Vf4pg-YXaZCplvyfckd5U5arK_6VfNvM2MViyR8QRhLolH7UhgaLvARLWC41MWqAPA2dA19niZB7d1lwW1F2LZSJVpVm_qDh6IMRAUjpDZ0jKj34O5_wdPSWxp1XpWxSRMV7c5vn3Hp0vAguiJ7IKrAOH3_3D8CHKNVbnIp7alHGPhiCcnONWzrBd0szgWHXJTjzbqInCue9KQfOjHvmKIA7uFHlSKxqoQlkrE9qRXfZ4-iLUL9XHmQgDw9nfo3Fi-hqE8X_Dt_l0iL8MF8RCJdQWMIhLIkQM90QaH36_5m6PbNwQteXkpP9hqmWIOeP_RVul2WhNANBOaZo0FAKi_N4nh5BWONt5fsRYkYtjE6Wfs4DckSawwVNEb4jgqlbZVOP-kQdwAqcdIlPsUvoFDX8TiNsv8dybA9tQIYPtilq_gwsBPJg0AkdwkeXqiCA8HPx6afOeUuR7KbfKVFE");
+  background-image: url("personal_button.png");
   background-size: cover;
 }
 
@@ -328,7 +328,7 @@
 
 .profile_title {
   font-size: 700%;
-  margin-top:-8%;
+  margin-top:-7%;
   margin-right: 8%;
   float: right;
   color:white;

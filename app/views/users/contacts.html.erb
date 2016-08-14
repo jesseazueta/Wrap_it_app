@@ -39,23 +39,25 @@
   <div class="users_header">
     <h1 class="users_index_title">Your Friends</h1>
   </div>
-<% @contact_list.each do |letter, friends| %>
-<div class="Letter" id ="contact_list_<%= letter %>">
-  <h1 class="upcase"><%=letter.upcase%></h1>
-</div>
-<ul>
-  <% friends.each do |friend| %>
-  <li>
-    <div class="contact_elements">
-
-      <div class="cont_pic">
-    <%=image_tag(friend.image, height:'175px', width: '175px',class: "user_pic")%>
-    </div>
-    <div class="contact_name">
-    <%= link_to friend.first_name + " " + friend.last_name, "/users/#{friend.id}/gifts" %>
-    <button class="add-friend"><%= link_to "Remove", "contact_delete/#{friend.id}"%></button>
-    </div>
+  <% @contact_list.each do |letter, friends| %>
+  <div class="Letter" id ="contact_list_<%= letter %>">
+    <h1 class="upcase"><%=letter.upcase%></h1>
   </div>
+  <ul>
+    <% friends.each do |friend| %>
+    <li>
+      <div class="contact_elements">
+
+        <div class="cont_pic">
+          <%=image_tag(friend.image, height:'175px', width: '175px',class: "user_pic")%>
+        </div>
+        <div class="contact_name">
+          <%= link_to friend.first_name + " " + friend.last_name, "/users/#{friend.id}/gifts" %>
+        </div>
+        <div class="friend_button">
+        <button class="add-friend"><%= link_to "Remove", "contact_delete/#{friend.id}"%></button>
+      </div>
+    </div>
   </li>
 </br>
 <% end %>
@@ -88,5 +90,5 @@
     <div class="text">
       <%= link_to "Add To List", new_gift_path %>
     </div>
-</div>
+  </div>
 </footer>

@@ -1,10 +1,52 @@
-<h1>Wrap-it! Results!</h1>
+
+<div class="header">
+
+  <h1 class="results_title"><span>Wrap-it! Results!</span></br>
+    See? No Worries, We Got You!</h1>
+  </div>
 
 
-<p>
-<%item = @response["ItemSearchResponse"]["Items"]["Item"]%>
-<% item.each do |result| %>
-<img src="<%=result["SmallImage"]["URL"]%>"/>
-<%= link_to result["ItemAttributes"]["Title"], result["DetailPageURL"],target: "_blank" %></br>
-<% end %>
-</p>
+  <div class="api_results">
+
+    <%item = @response["ItemSearchResponse"]["Items"]["Item"]%>
+    <% item.each do |result| %>
+    <div class="results_container">
+      <div class="result_image">
+        <img src="<%=result["SmallImage"]["URL"]%>"/>
+      </div>
+      <div class="api_link">
+        <%= link_to result["ItemAttributes"]["Title"], result["DetailPageURL"],target: "_blank" %>
+      </div>
+    </div>
+  </br>
+  <% end %>
+  <div class="empty">
+
+  </div>
+</div>
+<footer>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-user" aria-hidden="true"></i>'.html_safe, "/contacts/#{current_user.id}"%>
+    </div>
+    <div class="text">
+      <%= link_to "Contacts", "/contacts/#{current_user.id}"%>
+    </div>
+  </div>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-gift" aria-hidden="true"></i>'.html_safe, "/users/#{current_user.id}"%>
+    </div>
+    <div class="text">
+      <%= link_to "Wrap-It! List", "/users/#{current_user.id}" %>
+    </div>
+  </div>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_gift_path%>
+    </div>
+    <div class="text">
+      <%= link_to "Add To List", new_gift_path %>
+    </div>
+  </div>
+</footer>

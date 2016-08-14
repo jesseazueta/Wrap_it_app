@@ -1,6 +1,10 @@
 
 <header id="gift-index-header" class="<%=params[:category]%>" >
+  <h2 class="category_title"><%= params[:category] %></h2>
 </header>
+<!-- <div class="effect">
+
+</div> -->
 <div id="gifts-index-center">
   <% @users_gifts.each do | gift | %>
   <div class="gifts-loop-outer">
