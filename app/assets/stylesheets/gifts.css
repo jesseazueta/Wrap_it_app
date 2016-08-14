@@ -46,12 +46,18 @@ header, .All {
 /*HEADER*/
 /*HEADER*/
 /*HEADER*/
+.new-gift-title {
+	text-align: center;
+	background-color: rgb(85,214,205); 
+	padding: 1px;
+}
 #gifts-index-center {
 	/*height: 50vh;*/
 	border: 1px solid green;
 	display: flex;
 	flex-direction: column;
 	margin-top: 35%;
+
 }
 .gifts-loop-outer {
 
@@ -141,3 +147,31 @@ a:hover {
 .results_title span {
 	font-size: 1.7em;
 }
+
+/*central styling*/
+/*central styling*/
+/*central styling*/
+
+#new-gift-form-outside {
+	display: flex;
+	justify-content: space-around;
+}
+.nwg-inner, .nwg-inner input {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 1rem 0;
+}
+
+input#gift_image {
+	width:80px;
+}
+
+/*New gift styling*/
+/*New gift styling*/
+/*New gift styling*/
+/*New gift styling*/
+
