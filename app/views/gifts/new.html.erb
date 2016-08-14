@@ -1,9 +1,10 @@
-<h1>Add An Item to Your List!</h1>
-
+<div class="new-gift-title">
+<h1 class="new-gift-title">Add An Item to Your List!</h1>
+</div>
 
 <%= render 'form', gift: @gift %>
 
 
 
 
-<%= link_to "Back to Wrap-It! List", "/users/#{@gift.user.id}/gifts" %>
+<%#= link_to "Back to Wrap-It! List", "/users/#{@gift.user.id}/gifts" %>
