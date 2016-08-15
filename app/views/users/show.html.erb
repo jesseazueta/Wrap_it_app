@@ -1,9 +1,16 @@
 
 <div class="header">
+  <% if @user == @current_user %>
   <a href="/logout" class="log_out_button">Log Out</a>
   <%=link_to image_tag(current_user.image, height:'230px', width: '230px',class: "current_user_pic"), "/users/#{current_user.id}/edit"%>
   <h1 class="current_user_name"> <%= link_to current_user.first_name + " " + current_user.last_name,current_user, id:"back-to-profile", data: { current_user_id: current_user.id } %></h1>
   <h1 class ="profile_title">Wrap-It! List</h1>
+  <% else %>
+  <%=link_to image_tag(@user.image, height:'230px', width: '230px',class: "current_user_pic"), "/users/#{@user.id}"%>
+  <h1 class="current_user_name"> <%=@user.first_name + " " + @user.last_name%></h1>
+  <h1 class ="profile_title">Wrap-It! List</h1>
+  <% end %>
+
 </div>
 
 <h1 class="wrap_it">Wrap-It!</h1>

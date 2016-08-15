@@ -49,7 +49,7 @@ header, .All {
 /*HEADER*/
 .new-gift-title {
 	text-align: center;
-	background-color: rgb(85,214,205); 
+	background-color: rgb(85,214,205);
 	padding: 5px;
 	height: 17vh;
 	font-size: 220%;
@@ -71,7 +71,7 @@ header, .All {
 .gifts-loop-outer {
 
 	display: flex;
-	flex-direction: row;
+	/*flex-direction: column;*/
 	justify-content: flex-start;
 	align-items: center;
 	flex: 1 1 auto;
@@ -256,7 +256,7 @@ a:hover {
 	font-size: 300%;
 }
 .nwg-i-1 div {
-	font-size: 300%;	
+	font-size: 300%;
 	margin:0;
 }
 .nwg-i-1 select {
@@ -267,7 +267,7 @@ a:hover {
 	line-height:1;
 	border-radius:5px;
 	font-size:30px;
-	outline:none;	
+	outline:none;
 }
 
 input#gift_image {
@@ -289,7 +289,7 @@ font-size: 80%;
 	background-color: darkgrey;
 	border-radius: 9px;
 	color: white;
-	background-color: rgb(85,214,205); 
+	background-color: rgb(85,214,205);
 }
 .gf-text-field {
 	width: 15em;
@@ -310,11 +310,15 @@ font-size: 80%;
 	text-decoration:none;
 	color: white;
 }
+.row_elements {
+	display: flex;
+	flex-direction:row;
+	justify-content:flex-start;
+
+}
 
 /*New gift styling//////////////////////////*/
 /*New gift styling//////////////////////////*/
 /*New gift styling//////////////////////////*/
 /*New gift styling//////////////////////////*/
 /*New gift styling//////////////////////////*/
-
-

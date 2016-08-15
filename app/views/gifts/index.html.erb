@@ -9,32 +9,35 @@
 </div> -->
 <div class="gifts_container">
 
-<div id="gifts-index-center">
-  <% @users_gifts.each do | gift | %>
-  <div class="gifts-loop-outer">
+  <div id="gifts-index-center">
 
+    <% @users_gifts.each do | gift | %>
+    <div class="gifts-loop-outer">
 
-    <% if @user != current_user %>
-    <div class="gifts-loop-item">
-      <%= gift.purchased %>
-    </div>
+      <!-- <div class="row_elements"> -->
+
+        <% if @user != current_user %>
+        <div class="gifts-loop-item">
+          <%#= gift.purchased %>
+        </div>
+        <% end %>
+
+        <% if @user == current_user%>
+        <div class="gifts-loop-item">
+          <button class="edit"><%= link_to "Edit", edit_gift_path(gift)%></button>
+        </div>
+
+        <div class="gifts-loop-item">
+          <button class="remove"><%= link_to "Remove", gift, :method => :delete %></button>
+        </div>
+      <!-- </div> -->
     <% end %>
-
-    <% if @user == current_user%>
-    <div class="gifts-loop-item">
-      <button class="edit"><%= link_to "Edit", edit_gift_path(gift)%></button>
-    </div>
-
-    <div class="gifts-loop-item">
-      <button class="remove"><%= link_to "Remove", gift, :method => :delete %></button>
-    </div>
     <div class="gifts-loop-item">
       <%= link_to gift.name, gift%>
     </div>
   </div>
-  <% end %>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </div>
 
 
