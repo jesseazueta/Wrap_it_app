@@ -14,7 +14,7 @@ font-weight: bold;
   width: 100%;
   position: fixed;
   top:0;
-  background-image: url("effect.png");
+  background-image: url(image_path("effect.png"));
 
 
 }
