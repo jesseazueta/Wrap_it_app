@@ -1,0 +1,54 @@
+<div class="header">
+  <a href="/logout" class="log_out_button">Log Out</a>
+  <%=link_to image_tag(@user.image, height:'230px', width: '230px',class: "current_user_pic"), "/users/#{@user.id}"%>
+  <h1 class="current_user_name"> <%= link_to @user.first_name + " " + @user.last_name, id:"back-to-profile" %></h1>
+  <h1 class ="profile_title">Wrap-It! List</h1>
+</div>
+
+<h1 class="wrap_it">Wrap-It!</h1>
+<div class="all_button">
+  <%= link_to image_tag("view_all.png"), "/users/#{@user.id}/gifts" %>
+</div>
+
+<%#=link_to "View All", "/users/#{@user.id}/gifts"%>
+<div class="container">
+  <div class="row_top">
+    <a href="<%= "/users/#{@user.id}/gifts/Electronics"%>" class ="link"><div class="electronics_cont">
+    </div></a>
+    <a href="<%= "/users/#{@user.id}/gifts/Fashion"%>" class ="link"><div class="fashion_cont">
+    </div></a>
+  </div>
+  <div class="row_bottom">
+    <a href="<%= "/users/#{@user.id}/gifts/All"%>" class ="link"><div class="personal_cont">
+    </div></a>
+    <a href="<%= "/users/#{@user.id}/gifts/Toys"%>" class ="link"><div class="toys_cont">
+    </div></a>
+  </div>
+
+</div>
+<footer>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-user" aria-hidden="true"></i>'.html_safe, "/contacts/#{current_user.id}"%>
+    </div>
+    <div class="text">
+      <%= link_to "Contacts", "/contacts/#{current_user.id}"%>
+    </div>
+  </div>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-envelope-o" aria-hidden="true"></i>'.html_safe, users_path%>
+    </div>
+    <div class="text">
+      <%= link_to "Invite", users_path %>
+    </div>
+  </div>
+  <div class="footer_button">
+    <div class="image">
+      <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_gift_path%>
+    </div>
+    <div class="text">
+      <%= link_to "Add To List", new_gift_path %>
+    </div>
+  </div>
+</footer>

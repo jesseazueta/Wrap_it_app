@@ -133,7 +133,8 @@ header, .All {
 .api_link a{
 	text-decoration: none;
 	color: #55d6cd;
-	text-shadow: 2px 2px #666;
+	/*color: grey;*/
+	text-shadow: .5px .5px #333;
 	font-size: 2em;
 }
 a:hover {
@@ -170,7 +171,8 @@ a:hover {
 }
 .item_desc_container div{
 
-	padding-top: 20px;
+	padding-top: 4%;
+	padding-left: 5%;
 
 }
 .header_item_message {
@@ -187,9 +189,9 @@ a:hover {
 .wrap_it_button button{
 	/*display: flex;*/
 	background-color: #55d6cd;
-	font-size: 1.5em;
+	font-size: 4em;
 	margin-top: 2%;
-	margin-bottom: 20%;
+	margin-bottom: 25%;
 	margin-left: 35%;
 	border-radius: 10px;
 }
