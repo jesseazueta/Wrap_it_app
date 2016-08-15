@@ -49,8 +49,16 @@ header, .All {
 /*HEADER*/
 .new-gift-title {
 	text-align: center;
-	background-color: rgb(85,214,205);
-	padding: 1px;
+	background-color: rgb(85,214,205); 
+	padding: 5px;
+	height: 17vh;
+	font-size: 220%;
+	color: white;
+	text-shadow: 4px 4px #666;
+	background-image: url('effect.png');
+}
+.new-gift-h1 {
+	padding-top: 1.5em;
 }
 #gifts-index-center {
 	/*height: 50vh;*/
@@ -229,23 +237,84 @@ a:hover {
 
 #new-gift-form-outside {
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
 }
-.nwg-inner, .nwg-inner input {
+.nwg-inner {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-content: center;
-	align-items: center;
-	text-align: center;
-	margin: 1rem 0;
+	align-items: flex-start;
+	align-content: space-between;
+	margin-left: 2.5em;
+	padding: 8em 0;
+	color: white;
+}
+.nwg-inner div {
+	margin: 1em 0;
+}
+.nwg-inner input{
+	/*text-align: center;*/
+	font-size: 300%;
+}
+.nwg-i-1 div {
+	font-size: 300%;	
+	margin:0;
+}
+.nwg-i-1 select {
+	background-color: white;
+	width:100%;
+	padding:12px;
+	margin-top:8px;
+	line-height:1;
+	border-radius:5px;
+	font-size:30px;
+	outline:none;	
 }
 
 input#gift_image {
-	width:80px;
+font-size: 80%;
 }
 
-/*New gift styling*/
-/*New gift styling*/
-/*New gift styling*/
-/*New gift styling*/
+.gifts-foot {
+	display: flex;
+	flex-direction: row;
+}
+
+#gift-photo {
+	display: flex;
+	flex-direction: column;
+	font-size: 250%;
+	font-weight: bolder;
+}
+.gift-sub {
+	background-color: darkgrey;
+	border-radius: 9px;
+	color: white;
+	background-color: rgb(85,214,205); 
+}
+.gf-text-field {
+	width: 15em;
+}
+.new-gift-title a {
+	font-size: 65px;
+ font-color: white;
+    padding-top:5%;
+    padding-left: 5%;
+	position: relative;
+	/*left: -6.5em;*/
+	text-decoration: none;
+	text-decoration-color: white;
+	display: flex;
+
+}
+.test a{
+	text-decoration:none;
+	color: white;
+}
+
+/*New gift styling//////////////////////////*/
+/*New gift styling//////////////////////////*/
+/*New gift styling//////////////////////////*/
+/*New gift styling//////////////////////////*/
+/*New gift styling//////////////////////////*/
+
+

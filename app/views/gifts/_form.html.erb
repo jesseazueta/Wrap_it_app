@@ -2,45 +2,67 @@
 <div id="new-gift-form-outside">
 	<div class="nwg-inner">
 		<div>
-			<%= f.text_field :name, placeholder: "Name" %>
+			<%= f.text_field :name, placeholder: "Name" , class: "gf-text-field"%>
 		</div>
 		<div>
-			<%= f.text_field :model, placeholder: "Model" %>
+			<%= f.text_field :model, placeholder: "Model", class: "gf-text-field" %>
 		</div>
 		<div>
-			<%= f.text_field :price, placeholder: "Price" %>
+			<%= f.text_field :price, placeholder: "Price", class: "gf-text-field" %>
 		</div>
 		<div>
-			<%= f.text_field :weblink, placeholder: "Weblink" %>
+			<%= f.text_field :weblink, placeholder: "Weblink", class: "gf-text-field" %>
 		</div>
-		<div class="nwg-i-1">
-			<div>
-				<%=  label(:gift, :image) %>
-			</div>
-			<div id="ng-file-field">
-				<%= f.file_field :image%>
-			</div>
-		</div>
+		<!-- <div class="nwg-i-1"> -->
+		
+		<!-- </div> -->
 
 		<div class="nwg-i-1">
 			<div>
 				<%= label(:gift, "Store") %>
-			</div>
-			<div>
 				<%=f.select(:store, options_for_select(["Amazon", "Macy's", "Walmart", "Target"]))%>
+
 			</div>
 		</div>
 		<div class="nwg-i-1">
 			<div>
 				<%= label(:gift, :category) %>
-			</div>
-			<div>
-				<%=f.select(:category, options_for_select(["Electronics", "Fashion", "Toys", "All"]))%>
+				<%=f.select(:category, options_for_select(["Electronics", "Fashion", "Toys", "All"]), {:class => "input-select"})%>
 			</div>
 		</div>
+		<div class="photo" id="gift-photo">
+			<%= label( :gift, "Upload Image" ) %>
+			<button><%= f.file_field :image,:class => 'profile_pic',id: 'gift-img', :style=>"font-size:35px", :style => "margin:0"%></br></button>
+		</div>
 		<div>
-			<%= f.submit "Submit" %>
+			<%= f.submit "Submit" ,class: "gift-sub"%>
 		</div>
 
 	</div>
 	<% end %>
+	<footer class="gifts-foot">
+		<div class="footer_button">
+			<div class="image">
+				<%= link_to '<i class="fa fa-user" aria-hidden="true"></i>'.html_safe, "/contacts/#{current_user.id}"%>
+			</div>
+			<div class="text">
+				<%= link_to "Contacts", "/contacts/#{current_user.id}"%>
+			</div>
+		</div>
+		<div class="footer_button">
+			<div class="image">
+				<%= link_to '<i class="fa fa-gift" aria-hidden="true"></i>'.html_safe, "/users/#{current_user.id}"%>
+			</div>
+			<div class="text">
+				<%= link_to "Wrap-It! List", "/users/#{current_user.id}" %>
+			</div>
+		</div>
+		<div class="footer_button">
+			<div class="image">
+				<%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, new_gift_path%>
+			</div>
+			<div class="text">
+				<%= link_to "Add To List", new_gift_path %>
+			</div>
+		</div>
+	</footer>
