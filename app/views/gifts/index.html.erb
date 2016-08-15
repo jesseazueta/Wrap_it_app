@@ -1,6 +1,6 @@
 
 <header id="gift-index-header" class="<%=params[:category]%>" >
-  <%= link_to '<i class="fa fa-caret-left" aria-hidden="true"></i>'.html_safe, "/users/#{current_user.id}"%>
+  <%= link_to '<i class="fa fa-caret-left" aria-hidden="true"></i>'.html_safe, "/users/#{@user.id}"%>
   <h2 class="category_title"><%= params[:category] %></h2>
 
 </header>

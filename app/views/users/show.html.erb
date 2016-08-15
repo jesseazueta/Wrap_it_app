@@ -45,10 +45,10 @@
   </div>
   <div class="footer_button">
     <div class="image">
-      <%= link_to '<i class="fa fa-envelope-o" aria-hidden="true"></i>'.html_safe, users_path%>
+      <%= link_to '<i class="fa fa-gift" aria-hidden="true"></i>'.html_safe,"/users/#{current_user.id}"%>
     </div>
     <div class="text">
-      <%= link_to "Invite", users_path %>
+      <%= link_to "Wrap-It List!", users_path %>
     </div>
   </div>
   <div class="footer_button">
