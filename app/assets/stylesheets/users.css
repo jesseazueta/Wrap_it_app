@@ -94,7 +94,6 @@
 }
 .contact_elements {
   display: flex;
-  /*flex-direction: row;*/
 }
 
 .cont_pic {
@@ -255,7 +254,6 @@
   margin-left: 5%;
   height: 830px;
   width: 870px;
-  /*background-color: blue;*/
   display: flex;
   flex-direction: column;
   justify-content: space around;

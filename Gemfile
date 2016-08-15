@@ -35,6 +35,7 @@ gem 'vacuum', '~> 1.4'
 # gem 'capistrano-rails', group: :development
 gem 'dotenv-rails'
 gem 'aws-sdk', '~> 2.3'
+gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

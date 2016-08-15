@@ -43,10 +43,7 @@ header, .All {
 	border: 3px solid rgb(88, 123, 187);
 }
 
-/*HEADER*/
-/*HEADER*/
-/*HEADER*/
-/*HEADER*/
+
 .new-gift-title {
 	text-align: center;
 	background-color: rgb(85,214,205);
@@ -231,9 +228,7 @@ a:hover {
 .edit a,.remove a {
 	color:white;
 }
-/*central styling*/
-/*central styling*/
-/*central styling*/
+
 
 #new-gift-form-outside {
 	display: flex;
@@ -252,7 +247,6 @@ a:hover {
 	margin: 1em 0;
 }
 .nwg-inner input{
-	/*text-align: center;*/
 	font-size: 300%;
 }
 .nwg-i-1 div {
@@ -316,10 +310,3 @@ font-size: 80%;
 	justify-content:flex-start;
 
 }
-
-/*New gift styling//////////////////////////*/
-/*New gift styling//////////////////////////*/
-/*New gift styling//////////////////////////*/
-/*New gift styling//////////////////////////*/
-/*New gift styling//////////////////////////*/
-<--------------------------------------------->
