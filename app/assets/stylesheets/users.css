@@ -76,7 +76,7 @@
 }
 
 .empty {
-  height: 12%;
+  min-height: 300px;
 }
 .Letter, .cont_names{
   color:grey;
@@ -94,7 +94,7 @@
 }
 .contact_elements {
   display: flex;
-  flex-direction: row;
+  /*flex-direction: row;*/
 }
 
 .cont_pic {
@@ -342,4 +342,18 @@
   font-size: 40px;
   margin-right: 10%;
   margin-top:2%;
+}
+
+<--------------------------------------------->
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+
+
+
+
+
+
 }
