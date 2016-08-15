@@ -16,11 +16,11 @@ header, .All {
 	background-color: rgb(106, 216, 65);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-image: url("personal_logo2.png");
+	background-image: url(image_path("personal_logo2.png"));
 }
 
 .Fashion{
-	background-image: url("fashion_logo2.png");
+	background-image: url(image_path("fashion_logo2.png"));
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: rgb(64, 203, 242);
@@ -28,7 +28,7 @@ header, .All {
 }
 
 .Electronics {
-	background-image: url("Electronic_logo2.png");
+	background-image: url(image_path("Electronic_logo2.png"));
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: rgb(255, 143, 8);
@@ -36,7 +36,7 @@ header, .All {
 }
 
 .Toys {
-	background-image: url("toys_logo2.png");
+	background-image: url(image_path("toys_logo2.png"));
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: rgb(88, 123, 187);
@@ -52,7 +52,7 @@ header, .All {
 	font-size: 220%;
 	color: white;
 	text-shadow: 4px 4px #666;
-	background-image: url('effect.png');
+	background-image: url(image_path('effect.png'));
 }
 .new-gift-h1 {
 	padding-top: 1.5em;
